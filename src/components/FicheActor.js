@@ -9,31 +9,31 @@ const FicheActor = (props) => {
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/movie/" +
+        "https://api.themoviedb.org/3/person/" +
           props.id +
-          "/credits?api_key=a67b57849deb687f2cd49d7a8298b366"
+          "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
-      .then((res) => setPop(res.data.cast));
+      .then((res) => setPop(res.data));
   }, []);
-  console.log(props);
-  console.log("test");
+
+  console.log(pop);
 
   return (
-    <div className=" row ">
-      {pop.map((actor) =>
-        props.id == actor.id ? (
-          <div className="col">
-            <img
-              className="actorImg"
-              src={"https://image.tmdb.org/t/p/w200" + actor.profile_path}
-              alt=""
-            />
-            <p>{actor.original_name}</p>
-          </div>
-        ) : (
-          console.log(actor.id)
-        )
-      )}
+    <div className="main row">
+      <h1>{pop.name}</h1>
+      <h2>{pop.birthday}</h2>
+
+      <div className="col">
+        <img
+          src={"https://image.tmdb.org/t/p/w200" + pop.profile_path}
+          alt="poster"
+          className="images col"
+        />
+        <div className="col">
+          <p>{pop.overview}</p>
+          <p>{pop.biography}</p>
+        </div>
+      </div>
     </div>
   );
 };

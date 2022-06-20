@@ -22,16 +22,20 @@ const Actors = (props) => {
       <h1>{pop.title}</h1>
       {pop
         .filter((actor) => actor.order < 5)
-        .map((actor) => (
-          <NavLink className="col" exact to={"/actordetails/" + actor.id}>
-            <img
-              className="actorImg"
-              src={"https://image.tmdb.org/t/p/w200" + actor.profile_path}
-              alt=""
-            />
-            <p>{actor.original_name}</p>
-          </NavLink>
-        ))}
+        .map((actor) => {
+          console.log(actor);
+
+          return (
+            <NavLink className="col" exact to={"/actordetails/" + actor.id}>
+              <img
+                className="actorImg"
+                src={"https://image.tmdb.org/t/p/w200" + actor.profile_path}
+                alt=""
+              />
+              <p>{actor.original_name}</p>
+            </NavLink>
+          );
+        })}
     </div>
   );
 };

@@ -1,38 +1,191 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik+Mono+One&family=Work+Sans:wght@400;600;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+
+  margin: 0 auto;
   text-align: center;
+  font-family: 'Archivo Black', sans-serif;
+  color: #ffffff;
+  background-color: #16161a;
+  overflow-x: hidden;
+  max-width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #282c34;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.title {
+  position: relative;
+  text-align: left;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navigation {
+  background-color: #010101;
+  margin: 0 0 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2.5em;
+  font-family: 'Archivo Black', sans-serif;
+  grid-area: header;
+  
+
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  margin: 25px;
+  padding: 10px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  
+}
+
+.nav-active {
+  
+color: #7f5af0;
+}
+
+.logo{
+  width: 7em;
+}
+
+.movies h1{
+  color: #7f5af0;
+  
+}
+
+.images{
+  width:200px;
+  border-radius: 10px;
+}
+
+
+
+.inputField button{
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 0.5em 1em;
+  margin: 0 0 0 1em;
+  background-color: #7f5af0;
+  color: #ffffff;
+}
+
+.inputField Button:hover{
+  transform: scale(1.1);
+}
+.inputField input{
+  border: none;
+  font-weight: 400;
+  padding: 0.5em 1em;
+  margin: 0 0 0 1em;
+  border-radius: 5px;
+  color: #01010149;
+}
+
+.inputField{
+  margin: 2em 0 ;
+}
+
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.5);
+	width: 200px;
+  height: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	text-align: center;
+  border-radius: 0 0 10px 10px;
+}
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
+}
+
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+	opacity: 1;
+}
+
+.footer{
+  background-color: white;
+  grid-area: footer;
+  display: none;
+ 
+
+}
+
+.main{
+  grid-area: main;
+}
+
+.movieDescription{
+  display: flex;
+  flex-direction: row; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  height: 100%;
+  
+
+   
+
+}
+
+.bgDetails{
+  position: absolute;
+  width: 100%;
+  z-index: -10000;
+  opacity: 20%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
+
+.actorImg{
+  width: 100px;
+  margin: 0;
+}
+
+.categorie button{
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  background-color: #7f5af0;
+  color: #ffffff;
+}
+.categorie{
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

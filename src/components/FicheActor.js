@@ -16,6 +16,7 @@ const FicheActor = (props) => {
       .then((res) => setPop(res.data.cast));
   }, []);
   console.log(props);
+  console.log("test");
 
   return (
     <div className=" row ">

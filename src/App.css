@@ -189,3 +189,19 @@ color: #7f5af0;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+.review{
+  margin: 5em;
+}
+.review > p,
+.review> h3{
+  color: #c9c9c9;
+  font-family: 'Work Sans', sans-serif;
+  
+}
+.review>h3{
+  color: #7f5af0;
+  font-weight: 700;
+  text-align: left;
+  margin-left: 2em;
+}

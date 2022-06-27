@@ -7,6 +7,7 @@ const CategoriesList = () => {
   const [pop, setPop] = useState([]);
   const [id, setId] = useState("");
   const [genre, setGenre] = useState([]);
+  const [page, setPage] = useState(1);
 
   const movieURL =
     "https://api.themoviedb.org/3/discover/movie?api_key=a67b57849deb687f2cd49d7a8298b366&language=en-US&with_genres=";
@@ -15,13 +16,13 @@ const CategoriesList = () => {
     "https://api.themoviedb.org/3/genre/movie/list?api_key=a67b57849deb687f2cd49d7a8298b366&language=en-US";
 
   useEffect(() => {
-    axios.get(movieURL + id).then((res) => {
+    axios.get(movieURL + id + "&page=" + page).then((res) => {
       setPop(res.data.results);
     });
     axios.get(genreURL).then((res) => {
       setGenre(res.data.genres);
     });
-  }, [id, movieURL]);
+  }, [id, movieURL, page]);
 
   return (
     <div>
@@ -31,6 +32,10 @@ const CategoriesList = () => {
             {genre.name}
           </button>
         ))}
+      </div>
+      <div>
+        <button onClick={() => setPage(page - 1)}>Back</button>
+        <button onClick={() => setPage(page + 1)}>Next</button>
       </div>
 
       {

@@ -8,7 +8,7 @@ const ActorDetails = () => {
   const { slug } = useParams();
 
   return (
-    <div>
+    <div className="bg-dark">
       <Navigation />
       <FicheActor id={slug} />
 

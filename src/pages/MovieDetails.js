@@ -12,10 +12,12 @@ const MovieDetails = () => {
   return (
     <div>
       <Navigation />
+      <div className="container">
       <Details id={slug} />
       <Actors id={slug} />
       <Review id={slug} />
       <Footer />
+      </div>
     </div>
   );
 };

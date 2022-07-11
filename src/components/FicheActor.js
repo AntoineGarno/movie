@@ -9,8 +9,8 @@ const FicheActor = (props) => {
     axios
       .get(
         "https://api.themoviedb.org/3/person/" +
-        props.id +
-        "?api_key=a67b57849deb687f2cd49d7a8298b366"
+          props.id +
+          "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
   }, []);
@@ -20,7 +20,6 @@ const FicheActor = (props) => {
   return (
     <div className="main container-fluid">
       <div className="row">
-
         <div className="col-3 p-4 m-3">
           <img
             src={"https://image.tmdb.org/t/p/w200" + pop.profile_path}
@@ -104,18 +103,31 @@ const FicheActor = (props) => {
                 <th className="col-2">Date</th>
               </tr>
               <tr>
-                <td className="p-3">Jeanne du Barry (pre-production)<br />Louis XV</td>
+                <td className="p-3">
+                  Jeanne du Barry (pre-production)
+                  <br />
+                  Louis XV
+                </td>
                 <td></td>
               </tr>
               <tr>
-                <td className="p-3">Puffins (TV Mini Series short) (filming)<br />
-                  Johnny Puff<br />
-                  - Let's Dance ... Johnny Puff<br />
-                  - Fishing Competition ... Johnny Puff<br />
-                  - Whistle it off ... Johnny Puff<br />
-                  - A very special band ... Johnny Puff<br />
-                  - Tac's glasses ... Johnny Puff<br />
-                  Show all 70 episodes</td>
+                <td className="p-3">
+                  Puffins (TV Mini Series short) (filming)
+                  <br />
+                  Johnny Puff
+                  <br />
+                  - Let's Dance ... Johnny Puff
+                  <br />
+                  - Fishing Competition ... Johnny Puff
+                  <br />
+                  - Whistle it off ... Johnny Puff
+                  <br />
+                  - A very special band ... Johnny Puff
+                  <br />
+                  - Tac's glasses ... Johnny Puff
+                  <br />
+                  Show all 70 episodes
+                </td>
                 <td className="text-start">2021-2022</td>
               </tr>
               <tr>
@@ -130,10 +142,8 @@ const FicheActor = (props) => {
                 <td>Island Trading</td>
                 <td>2011</td>
               </tr>
-
             </table>
           </div>
-
         </div>
         <div className="row">
           <div className="col-5 d-inline-flex flex-row justify-content-evenly filmographie ">

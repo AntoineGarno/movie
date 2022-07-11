@@ -5,8 +5,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
-  
 }
 
 body {
@@ -22,7 +20,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
+  grid-template-areas:
     'header'
     'main'
     'footer';
@@ -68,110 +66,141 @@ a:hover {
   color: #7F5AF0;
 }
 
-.logo{
+.logo {
   width: 7em;
 }
 
-.movies h1{
+.movies h1 {
   color: #7f5af0;
-  
 }
 
-.images{
-  width:200px;
+
+                                                                                          /*Fiche Actor*/
+.images {
+  width: 200px;
   border-radius: 10px;
 }
 
+/*Sizing de l'image de l'acteur*/
 .imageActor {
   width: 330px;
 }
 
 
-.liActor li:hover {
-  color: #FFBB00;
-  border-bottom: 1px solid #FFBB00;
-}
-
+/*Lien dans la page actor ex: Resume Bande announce etc..*/
 .liActor li {
   border-bottom: 1px solid #1B1A1A;
   font-size: 1.2em;
 }
 
-hr {
+/*Le Hover orange des liens */
+.liActor li:hover {
   color: #FFBB00;
+  border-bottom: 1px solid #FFBB00;
+  cursor: pointer;
 }
 
-.inputField button{
-  border-radius: 5px;
-  font-weight: 400;
-  padding: 0.5em 1em;
-  margin: 0 0 0 1em;
-  background-color: #7f5af0;
-  color: #ffffff;
+
+/*Badge de Couleur mauve (PROBLEM AVEC LE RADIUS)*/
+.actoreBadge {
+  color: rgb(255, 255, 255);
+  border: 2px solid #7F5AF0;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 20%;
+  margin-bottom: 2%;
 }
 
-.inputField Button:hover{
-  transform: scale(1.1);
-}
-.inputField input{
-  border: none;
-  font-weight: 400;
-  padding: 0.5em 1em;
-  margin: 0 0 0 1em;
-  border-radius: 5px;
-  color: #01010149;
+/*Hr du haut de la fiche acteur*/
+.hr {
+  color: #FFBB00;
+  margin-top: -21px;
 }
 
-.inputField{
-  margin: 2em 0 ;
+/*Hr du bas de la fiche acteur*/
+.hr2 {
+  color: #FFBB00;
+  margin-top: 30px;
+  width: 2000px;
+}
+
+/*Gestion de L'espace pour les h4 fiche acteur*/
+.filmographie {
+  padding: 0px 0px 0px 38px;
+  margin: 0px 50em 0px 0px;
+}
+
+/*Ligne Orange en Degrader*/
+.degrade-horizontal {
+  background: linear-gradient(to right, #FFBB00, #020916);
+  width: 500px;
+  height: 3px;
+}
+
+
+
+#tableActor td,
+#tableActor th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+.tableFilmographie {
+  margin: 2em 0em 3em 5em;
+}
+
+#tableActor th {
+  padding: 10px 20px 10px 20px;
 }
 
 .overlay {
-	position: absolute;
-	background: rgba(0, 0, 0, 0.5);
-	width: 200px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 200px;
   height: 100%;
-	transition: 0.5s ease;
-	opacity: 0;
-	bottom: 0;
-	font-size: 20px;
-	text-align: center;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  text-align: center;
   border-radius: 0 0 10px 10px;
 }
+
 .image-container {
-	position: relative;
-	transition: transform 0.2s;
+  position: relative;
+  transition: transform 0.2s;
 }
 
 .image-container:hover {
-	cursor: pointer;
-	transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .image-container:hover .overlay {
-	opacity: 1;
+  opacity: 1;
 }
 
-.footer{
+.footer {
   background-color: white;
   grid-area: footer;
   display: none;
 }
 
-.main{
+.main {
   grid-area: main;
 }
 
-.movieDescription{
+.movieDescription {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   height: 100%;
-  
+
 }
 
-.bgDetails{
+.bgDetails {
   position: absolute;
   width: 100%;
   z-index: -1;
@@ -181,12 +210,12 @@ hr {
   object-fit: cover;
 }
 
-.actorImg{
+.actorImg {
   width: 100px;
   margin: 0;
 }
 
-.categorie button{
+.categorie button {
   border-radius: 5px;
   font-weight: 400;
   padding: 0.5em 1em;
@@ -194,7 +223,8 @@ hr {
   background-color: #7f5af0;
   color: #ffffff;
 }
-.categorie{
+
+.categorie {
   width: 70%;
   margin: 0 auto;
   display: flex;
@@ -202,16 +232,18 @@ hr {
   justify-content: space-around;
 }
 
-.review{
+.review {
   margin: 5em;
 }
-.review > p,
-.review> h3{
+
+.review>p,
+.review>h3 {
   color: #c9c9c9;
   font-family: 'Work Sans', sans-serif;
-  
+
 }
-.review>h3{
+
+.review>h3 {
   color: #7f5af0;
   font-weight: 700;
   text-align: left;

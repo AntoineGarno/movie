@@ -9,6 +9,7 @@ const SearchMovies = () => {
   const [pop, setPop] = useState([]);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
+
   const baseSearch = () => {
     axios
       .get(

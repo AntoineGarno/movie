@@ -14,7 +14,6 @@ body {
 
   margin: 0 auto;
   text-align: center;
-  font-family: 'Archivo Black', sans-serif;
   color: #ffffff;
   background-color: #1b1a1a;
   overflow-x: hidden;
@@ -28,6 +27,10 @@ body {
     'header'
     'main'
     'footer';
+}
+
+p {
+  font-family: 'Work Sans', sans-serif;
 }
 
 li {
@@ -80,7 +83,24 @@ a:hover {
   border-radius: 10px;
 }
 
+.imageActor {
+  width: 330px;
+}
 
+
+.liActor li:hover {
+  color: #FFBB00;
+  border-bottom: 1px solid #FFBB00;
+}
+
+.liActor li {
+  border-bottom: 1px solid #1B1A1A;
+  font-size: 1.2em;
+}
+
+hr {
+  color: #FFBB00;
+}
 
 .inputField button{
   border-radius: 5px;
@@ -137,8 +157,6 @@ a:hover {
   background-color: white;
   grid-area: footer;
   display: none;
- 
-
 }
 
 .main{

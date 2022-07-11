@@ -22,34 +22,39 @@ const FicheActor = (props) => {
     <div className="main container-fluid">
       <div className="row">
 
-        <div className="col-4 p-4 m-2">
+        <div className="col-3 p-4 m-3">
           <img
             src={"https://image.tmdb.org/t/p/w200" + pop.profile_path}
             alt="poster"
-            className="img-fluid rounded"
+            className="img-fluid rounded p-3 imageActor"
           />
         </div>
 
-        <div className="col-7 text-start p-4 m-2">
-          <h2>{pop.name}</h2>
-          <h3>Biography</h3>
-          <p>{pop.biography}</p>
-          <p>{pop.overview}</p>
+        <div className="col-8 text-start p-4 m-3">
+          <h2 className="pb-1">{pop.name}</h2>
+          <h3 className="py-3">Biography</h3>
+          <p className="pb-4">{pop.biography}</p>
           <p>Date de naissance</p>
           <p>{pop.birthday}</p>
           <p>Lieu de naissance</p>
+          <p className="text-danger">METTRE LIEU DE NAISSANCE CI DANS API</p>
         </div>
 
         <div className="container">
-          <div className="row">
-            <p className="col-1">Résumé</p>
-            <p className="col-2">Bande annonces</p>
-            <p className="col-1">Vidéos</p>
-            <p className="col-1">Photos</p>
+          <div className="row ">
+            <ul className="col-5 d-flex justify-content-evenly flex-row p-1  liActor">
+              <li>Résumé</li>
+              <li>Bande annonces</li>
+              <li>Vidéos</li>
+              <li>Photos</li>
+            </ul>
+            <ul className="col-7 d-flex justify-content-center flex-row p-1 liActor">
+              <li className="col-3">Acteur</li>
+              <li className="col-3">Producteur</li>
+              <li className="col-3">Directeur</li>
+            </ul>
           </div>
-          
-          <div className="">
-          </div>
+            <hr/>
         </div>
       </div>
     </div>

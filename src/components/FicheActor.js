@@ -1,7 +1,8 @@
 import axios from "axios";
 import React from "react";
-import anya from "../images/anya.jpg"
+import ActorMovies from "./ActorMovies";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 const FicheActor = (props) => {
   const [pop, setPop] = useState([]);
 
@@ -64,10 +65,7 @@ const FicheActor = (props) => {
           <div className="row col-lg-12 col-sm-6 mx-4 ">
             <div className="col-2"></div>
             <div className=" col-8 d-flex flex-row">
-              <div className="p-2 col bg-info"><img src={anya} width="200px" height="150px" /></div>
-              <div className="p-2 col bg-danger"><img src={anya} width="200px" height="150px" /></div>
-              <div className="p-2 col bg-warning"><img src={anya} width="200px" height="150px" /></div>
-              <div className="p-2 col bg-success"><img src={anya} width="200px" height="150px" /></div>
+              <ActorMovies id={props.id} />
               <div className="col-2"></div>
             </div>
           </div>

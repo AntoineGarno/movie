@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import image from "./image.jpg"
+import anya from "../images/anya.jpg"
 import { useEffect, useState } from "react";
 const FicheActor = (props) => {
   const [pop, setPop] = useState([]);
@@ -62,13 +62,24 @@ const FicheActor = (props) => {
               <span class="mt-4 degrade-horizontal"></span>
             </div>
           </div>
-          <div className="row col-lg-12 col-sm-6 m-4 ">
+          <div className="row col-lg-12 col-sm-6 mx-4 ">
             <div className="col-2"></div>
             <div className=" col-8 d-flex flex-row">
-              <div className="p-2 col bg-info">Film 1</div>
-              <div className="p-2 col bg-danger">Film 2</div>
-              <div className="p-2 col bg-warning">Film 3</div>
-              <div className="p-2 col bg-success">Film 4</div>
+              <div className="p-2 col bg-info"><img src={anya} width="200px" height="150px" /></div>
+              <div className="p-2 col bg-danger"><img src={anya} width="200px" height="150px" /></div>
+              <div className="p-2 col bg-warning"><img src={anya} width="200px" height="150px" /></div>
+              <div className="p-2 col bg-success"><img src={anya} width="200px" height="150px" /></div>
+              <div className="col-2"></div>
+            </div>
+          </div>
+
+          <div className="row col-lg-12 col-sm-6 mx-4 ">
+            <div className="col-2"></div>
+            <div className=" col-8 d-flex flex-row">
+              <div className="p-2 col bg-dark">grey block</div>
+              <div className="p-2 col bg-dark">grey block</div>
+              <div className="p-2 col bg-dark">grey block</div>
+              <div className="p-2 col bg-dark">grey block</div>
               <div className="col-2"></div>
             </div>
           </div>

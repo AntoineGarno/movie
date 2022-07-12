@@ -3,6 +3,7 @@ import React from "react";
 import ActorMovies from "./ActorMovies";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import chad from "../images/chad.jpg";
 const FicheActor = (props) => {
   const [pop, setPop] = useState([]);
 
@@ -26,6 +27,10 @@ const FicheActor = (props) => {
             src={"https://image.tmdb.org/t/p/w200" + pop.profile_path}
             alt="poster"
             className="img-fluid rounded-3 p-3 imageActor"
+            onError={({ currentTarget }) => {
+              currentTarget.onerror = null; // prevents looping
+              currentTarget.src = chad;
+            }}
           />
         </div>
 

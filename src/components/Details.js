@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 
 import { useEffect, useState } from "react";
+
 const Details = (props) => {
   const [pop, setPop] = useState([]);
 
@@ -13,8 +14,19 @@ const Details = (props) => {
           "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
-  }, []);
+  }, [refreshPage]);
   console.log(pop);
+  function refreshPage() {
+    window.location.reload(false);
+  }
+  function timeConvert(n) {
+    var num = n;
+    var hours = num / 60;
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    return rhours + " hour(s) and " + rminutes + " minute(s).";
+  }
 
   return (
     <div className="main row">
@@ -33,6 +45,7 @@ const Details = (props) => {
         <div className="row">
           <p>{pop.overview}</p>
           <p>{pop.vote_average} /10</p>
+          <p>{timeConvert(pop.runtime)} </p>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ const ActorMovies = (props) => {
   return (
     <div className="row target">
       {pop
-        .filter((movie) => movie.order < 1)
+        .filter((movie, index) => index < 4)
         .map((movie) => (
           <div className="col">
             <Movie movie={movie} key={movie.id} />

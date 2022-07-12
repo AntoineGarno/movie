@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import anya from "../images/anya.jpg";
 const Movie = ({ movie }) => {
   return (
     <NavLink
@@ -11,6 +11,10 @@ const Movie = ({ movie }) => {
       <img
         src={"https://image.tmdb.org/t/p/w200" + movie.poster_path}
         alt="poster"
+        onError={({ currentTarget }) => {
+          currentTarget.onerror = null; // prevents looping
+          currentTarget.src = anya;
+        }}
         className="images"
       />
       <div className="overlay d-flex align-items-center justify-content-center">

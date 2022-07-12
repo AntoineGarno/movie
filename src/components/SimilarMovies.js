@@ -15,16 +15,21 @@ const SimilarMovies = (props) => {
           "/similar?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data.results));
-  }, []);
+  }, [refreshPage]);
   console.log(pop);
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     <div className="row target">
-      {pop.map((movie) => (
-        <div className="col">
-          <Movie movie={movie} key={movie.id} />
-        </div>
-      ))}
+      {pop
+        .filter((movie, index) => index < 4)
+        .map((movie) => (
+          <div className="col">
+            <Movie movie={movie} key={movie.id} onClick={refreshPage} />
+          </div>
+        ))}
     </div>
   );
 };

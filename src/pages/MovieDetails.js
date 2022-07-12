@@ -14,11 +14,11 @@ const MovieDetails = () => {
     <div>
       <Navigation />
       <div className="container">
-      <Details id={slug} />
-      <Actors id={slug} />
-      <SimilarMovies id={slug} />
-      <Review id={slug} />
-      <Footer />
+        <Details id={slug} />
+        <Actors id={slug} />
+        <SimilarMovies id={slug} />
+        <Review id={slug} />
+        <Footer />
       </div>
     </div>
   );

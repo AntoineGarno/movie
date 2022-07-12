@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import chad from "../images/chad.jpg";
 
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -14,8 +15,11 @@ const Actors = (props) => {
           "/credits?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data.cast));
-  }, []);
+  }, [refreshPage]);
   console.log(props);
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     <div className=" row ">
@@ -31,6 +35,10 @@ const Actors = (props) => {
                 className="actorImg"
                 src={"https://image.tmdb.org/t/p/w200" + actor.profile_path}
                 alt=""
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src = chad;
+                }}
               />
               <p>{actor.original_name}</p>
             </NavLink>

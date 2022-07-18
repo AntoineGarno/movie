@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-
+import imgNotFound from "../images/imgNotFound.jpg";
 import { useEffect, useState } from "react";
 
 const Details = (props) => {
@@ -40,6 +40,10 @@ const Details = (props) => {
         <img
           src={"https://image.tmdb.org/t/p/w200" + pop.poster_path}
           alt="poster"
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null; // prevents looping
+            currentTarget.src = imgNotFound;
+          }}
           className="images"
         />
         <div className="row">

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import chad from "../images/chad.jpg";
+import imgNotFound from "../images/imgNotFound.jpg";
 
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -37,7 +37,7 @@ const Actors = (props) => {
                 alt=""
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null; // prevents looping
-                  currentTarget.src = chad;
+                  currentTarget.src = imgNotFound;
                 }}
               />
               <p>{actor.original_name}</p>

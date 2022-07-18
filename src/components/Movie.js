@@ -6,7 +6,7 @@ const Movie = ({ movie }) => {
     <NavLink
       exact
       to={"/details/" + movie.id}
-      className="image-container d-flex justify-content-center col m-3"
+      className="image-container d-flex justify-content-center col"
     >
       <img
         src={"https://image.tmdb.org/t/p/w200" + movie.poster_path}

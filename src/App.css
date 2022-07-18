@@ -58,6 +58,8 @@ a {
   cursor: pointer;
 }
 
+
+
 a:hover {
   color: #7F5AF0;
 }
@@ -74,7 +76,6 @@ a:hover {
   color: #7f5af0;
 }
 
-
                                                                                           /*Fiche Actor*/
 .images {
   width: 200px;
@@ -85,7 +86,6 @@ a:hover {
 .imageActor {
   width: 330px;
 }
-
 
 /*Lien dans la page actor ex: Resume Bande announce etc..*/
 .liActor li {
@@ -99,7 +99,6 @@ a:hover {
   border-bottom: 1px solid #FFBB00;
   cursor: pointer;
 }
-
 
 /*Badge de Couleur mauve (PROBLEM AVEC LE RADIUS)*/
 .actoreBadge {
@@ -115,6 +114,10 @@ a:hover {
 .hr {
   color: #FFBB00;
   margin-top: -21px;
+}
+
+#ConnuPour {
+
 }
 
 /*Hr du bas de la fiche acteur*/
@@ -153,7 +156,7 @@ a:hover {
 #tableActor th {
   padding: 10px 20px 10px 20px;
 }
-
+                                                                                /*Fin Fiche Acteur*/
 .overlay {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
@@ -181,10 +184,11 @@ a:hover {
   opacity: 1;
 }
 
+
+                                                                                          /*Footer*/
 .footer {
-  background-color: white;
-  grid-area: footer;
-  display: none;
+  background-color: #16161A;
+  /*display: none;*/
 }
 
 .main {

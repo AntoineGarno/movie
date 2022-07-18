@@ -10,8 +10,8 @@ const FicheActor = (props) => {
     axios
       .get(
         "https://api.themoviedb.org/3/person/" +
-          props.id +
-          "?api_key=a67b57849deb687f2cd49d7a8298b366"
+        props.id +
+        "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
   }, []);
@@ -63,21 +63,10 @@ const FicheActor = (props) => {
             </div>
           </div>
           <div className="row col-lg-12 col-sm-6 mx-4 ">
-            <div className="col-2"></div>
-            <div className=" col-8 d-flex flex-row">
+            <div className="col-1"></div>
+            <div className=" col-10 d-flex flex-row">
               <ActorMovies id={props.id} />
-              <div className="col-2"></div>
-            </div>
-          </div>
-
-          <div className="row col-lg-12 col-sm-6 mx-4 ">
-            <div className="col-2"></div>
-            <div className=" col-8 d-flex flex-row">
-              <div className="p-2 col bg-dark">grey block</div>
-              <div className="p-2 col bg-dark">grey block</div>
-              <div className="p-2 col bg-dark">grey block</div>
-              <div className="p-2 col bg-dark">grey block</div>
-              <div className="col-2"></div>
+              <div className="col-1"></div>
             </div>
           </div>
 
@@ -144,13 +133,16 @@ const FicheActor = (props) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-5 d-inline-flex flex-row justify-content-evenly filmographie ">
-            <h4 className="py-2 mx-3 text-start col-2">Photo</h4>
+          <div className="col-5 mx-2  d-inline-flex flex-row justify-content-evenly filmographie">
+            <h4 className="py-2 mx-4">Photos</h4>
             <span class="mt-4 degrade-horizontal"></span>
           </div>
-          <div className="col-1 d-flex flex-row">
-            <div className="col-6 py-2">ARROW LEFT</div>
-            <div className="col-6 py-2">ARROW RIGHT</div>
+        </div>
+        <div className="row col-lg-12 col-sm-6 m-4 ">
+          <div className="col-1"></div>
+          <div className=" col-10 d-flex flex-row">
+            <ActorMovies id={props.id} />
+            <div className="col-1"></div>
           </div>
         </div>
         <footer>

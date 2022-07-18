@@ -5,7 +5,7 @@ import instagram from "../images/instagram.png";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer m-2 p-1">
       <div className="container">
 
         <div className="m-2 text-muted">

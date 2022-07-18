@@ -67,9 +67,9 @@ const FicheActor = (props) => {
               <span class="mt-4 degrade-horizontal"></span>
             </div>
           </div>
-          <div className="row col-lg-12 col-sm-6 mx-4 ">
+          <div className="row col-lg-12 col-sm-6 mx-4">
             <div className="col-1"></div>
-            <div className=" col-10 d-flex flex-row">
+            <div className=" col-10 d-flex flex-row my-5">
               <ActorMovies id={props.id} />
               <div className="col-1"></div>
             </div>
@@ -139,7 +139,7 @@ const FicheActor = (props) => {
         </div>
         <div className="row">
           <div className="col-5 mx-2  d-inline-flex flex-row justify-content-evenly filmographie">
-            <h4 className="py-2 mx-4">Photos</h4>
+            <h4 className="py-2">Photos</h4>
             <span class="mt-4 degrade-horizontal"></span>
           </div>
         </div>

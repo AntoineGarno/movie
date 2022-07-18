@@ -3,7 +3,7 @@ import React from "react";
 import ActorMovies from "./ActorMovies";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import chad from "../images/chad.jpg";
+import imgNotFound from "../images/imgNotFound.jpg";
 const FicheActor = (props) => {
   const [pop, setPop] = useState([]);
 
@@ -29,7 +29,7 @@ const FicheActor = (props) => {
             className="img-fluid rounded-3 p-3 imageActor"
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
-              currentTarget.src = chad;
+              currentTarget.src = imgNotFound;
             }}
           />
         </div>

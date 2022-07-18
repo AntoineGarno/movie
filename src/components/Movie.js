@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import anya from "../images/anya.jpg";
+import imgNotFound from "../images/imgNotFound.jpg";
 const Movie = ({ movie }) => {
   return (
     <NavLink
@@ -13,7 +13,7 @@ const Movie = ({ movie }) => {
         alt="poster"
         onError={({ currentTarget }) => {
           currentTarget.onerror = null; // prevents looping
-          currentTarget.src = anya;
+          currentTarget.src = imgNotFound;
         }}
         className="images"
       />

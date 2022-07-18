@@ -13,30 +13,37 @@ const SearchMovies = () => {
   const baseSearch = () => {
     axios
       .get(
-        "https://api.themoviedb.org/3/movie/top_rated?api_key=23864b640ca2d076f531ea8f5539d1c0"
+        query
+          ? "https://api.themoviedb.org/3/search/movie?api_key=23864b640ca2d076f531ea8f5539d1c0&language=en-US&query=" +
+              query +
+              "&page=" +
+              page
+          : "https://api.themoviedb.org/3/movie/top_rated?api_key=23864b640ca2d076f531ea8f5539d1c0" +
+              "&page=" +
+              page
       )
       .then((res) => {
         setPop(res.data.results);
       });
   };
 
-  const search = (e) => {
-    e.preventDefault();
+  // const search = (e) => {
+  //   e.preventDefault();
 
-    axios
-      .get(
-        "https://api.themoviedb.org/3/search/movie?api_key=23864b640ca2d076f531ea8f5539d1c0&language=en-US&query=" +
-          query +
-          "&page=" +
-          page
-      )
-      .then((res) => {
-        setPop(res.data.results);
-      });
-  };
+  //   axios
+  //     .get(
+  //       "https://api.themoviedb.org/3/search/movie?api_key=23864b640ca2d076f531ea8f5539d1c0&language=en-US&query=" +
+  //         query +
+  //         "&page=" +
+  //         page
+  //     )
+  //     .then((res) => {
+  //       setPop(res.data.results);
+  //     });
+  // };
   useEffect(() => {
     baseSearch();
-  }, []);
+  }, [query, page]);
 
   return (
     <div>
@@ -48,10 +55,15 @@ const SearchMovies = () => {
           placeholder="Rechercher"
         />
 
-        <button onClick={search}>Submit</button>
+        {/* <button onClick={search}>Submit</button> */}
       </form>
-      <div>
+      <div className="d-flex flex-row justify-content-center my-3">
         <button onClick={() => setPage((page) => page - 1)}>Back</button>
+        <div className="d-flex flex-row">
+          <p> {page - 1} . </p>
+          <p> ( {page} ) </p>
+          <p> . {page + 1} </p>
+        </div>
         <button onClick={() => setPage((page) => page + 1)}>Next</button>
       </div>
 

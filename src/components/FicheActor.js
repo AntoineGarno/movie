@@ -22,11 +22,11 @@ const FicheActor = (props) => {
   return (
     <div className="main container-fluid">
       <div className="row">
-        <div className="col-3 p-4 m-3">
+        <div className="col-md-2 col-lg-3 m-2">
           <img
             src={"https://image.tmdb.org/t/p/w200" + pop.profile_path}
             alt="poster"
-            className="img-fluid rounded-3 p-3 imageActor"
+            className="img-fluid rounded-3 p-3 imageActor rounded-2"
             onError={({ currentTarget }) => {
               currentTarget.onerror = null; // prevents looping
               currentTarget.src = imgNotFound;
@@ -34,36 +34,38 @@ const FicheActor = (props) => {
           />
         </div>
 
-        <div className="col-8 text-start p-4 m-3">
+        <div className="col-md-6 col-lg-7 text-start my-4">
           <h2 className="pb-1">{pop.name}</h2>
-          <h3 className="py-3">Biography</h3>
-          <p className="pb-4">{pop.biography}</p>
-          <p>Date de naissance</p>
+          <h3 className="py-3">Biographie</h3>
+          <p className="pb-4 col-sm- col-md-6 col-lg-10">{pop.biography}</p>
+          <strong><p>Date de naissance</p></strong>
           <p>{pop.birthday}</p>
-          <p>Lieu de naissance</p>
+          <strong><p>Lieu de naissance</p></strong>
           <p className="text-danger">METTRE LIEU DE NAISSANCE CI DANS API</p>
         </div>
 
         <div className="row">
-          <ul className="col-5 d-flex justify-content-evenly flex-row p-1 liActor">
-            <li className="pt-1">Résumé</li>
-            <li className="pt-1">Bande annonces</li>
-            <li className="pt-1">Vidéos</li>
-            <li className="pt-1">Photos</li>
+          <div className="row m-4">
+          <ul className="d-flex flex-row p-md-1 m-3 col-md-2 col-lg-5  liActor">
+            <li className="pt-1 mx-auto col-md-1 col-lg-3">Résumé</li>
+            <li className="pt-1 d-md-none d-lg-block col-lg-3">Bande annonces</li>
+            <li className="pt-1 m col-md-1 col-lg-3">Vidéos</li>
+            <li className="pt-1 d-md-none d-lg-block col-lg-3">Photos</li>
           </ul>
 
-          <div className="col-7 px-4">
-            <ul className="col-8 d-flex justify-content-end flex-row p-1 ml-4">
-              <li className="px-4 py-2 mx-3 actoreBadge">Acteur</li>
-              <li className="px-4 py-2 mx-3 actoreBadge">Producteur</li>
-              <li className="px-4 py-2 mx-3 actoreBadge">Directeur</li>
+          <div className="px-4 col-md-4 col-lg-6">
+            <ul className="d-flex justify-content-start flex-row p-2 ml-4 col-lg-6 ">
+              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Acteur</li>
+              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Directeur</li>
+              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Producteur</li>
             </ul>
+          </div>
           </div>
 
           <hr className="hr" />
           <div className="row">
-            <div className="col-5 mx-2  d-inline-flex flex-row justify-content-evenly filmographie">
-              <h4 className="py-2 mx-4">Connu pour</h4>
+            <div className="col-5 d-inline-flex flex-row justify-content-evenly filmographie">
+              <h4 className="py-2 ">Connu pour</h4>
               <span class="mt-4 degrade-horizontal"></span>
             </div>
           </div>

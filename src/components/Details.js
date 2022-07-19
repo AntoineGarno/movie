@@ -29,14 +29,13 @@ const Details = (props) => {
   }
 
   return (
-    <div className="main row">
-      <h1>{pop.title}</h1>
+    <div className="main row d-flex my-5">
       <img
         className="bgDetails col-4"
         src={"https://image.tmdb.org/t/p/original" + pop.backdrop_path}
         alt=""
       />
-      <div className="movieDescription col-8">
+      <div className="movieDescription col d-flex justify-content-between ">
         <img
           src={"https://image.tmdb.org/t/p/w200" + pop.poster_path}
           alt="poster"
@@ -44,12 +43,17 @@ const Details = (props) => {
             currentTarget.onerror = null; // prevents looping
             currentTarget.src = imgNotFound;
           }}
-          className="images"
+          className="images col-2"
         />
-        <div className="row">
-          <p>{pop.overview}</p>
-          <p>{pop.vote_average} /10</p>
-          <p>{timeConvert(pop.runtime)} </p>
+        <div className="row mr-auto col-10 ">
+          <h1 className="mb-5">{pop.title}</h1>
+
+          <div className="px-5">
+            <p>{pop.overview}</p>
+            <p>Date de sortie: {pop.release_date}</p>
+            <p>{pop.vote_average} /10</p>
+            <p>{timeConvert(pop.runtime)} </p>
+          </div>
         </div>
       </div>
     </div>

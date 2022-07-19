@@ -22,7 +22,7 @@ const Actors = (props) => {
   }
 
   return (
-    <div className=" row ">
+    <div className=" row actors">
       <h1>{pop.title}</h1>
       {pop
         .filter((actor) => actor.order < 5)

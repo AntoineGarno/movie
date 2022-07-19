@@ -2,9 +2,29 @@ import axios from "axios";
 import React from "react";
 import Movie from "./Movie";
 import { useEffect, useState } from "react";
+import Typography from "@mui/material/Typography";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 const PopularMovies = () => {
   const [pop, setPop] = useState([]);
   const [page, setPage] = useState(1);
+
+  const theme = createTheme({
+    palette: {
+      text: {
+        primary: "#fffff",
+      },
+      secondary: {
+        main: "#ffffff",
+      },
+    },
+  });
+
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
 
   useEffect(() => {
     axios
@@ -19,10 +39,6 @@ const PopularMovies = () => {
 
   return (
     <div className="row main">
-      <div>
-        <button onClick={() => setPage(page - 1)}>Back</button>
-        <button onClick={() => setPage(page + 1)}>Next</button>
-      </div>
       {
         <div className="row target">
           {pop.map((movie) => (
@@ -30,6 +46,20 @@ const PopularMovies = () => {
           ))}
         </div>
       }
+      <div className="d-flex flex-row justify-content-center my-3 ">
+        <ThemeProvider theme={theme}>
+          <Stack spacing={2}>
+            <Typography>Page: {page}</Typography>
+            <Pagination
+              count={50}
+              page={page}
+              onChange={handleChange}
+              color="secondary"
+              variant="text"
+            />
+          </Stack>
+        </ThemeProvider>
+      </div>
     </div>
   );
 };

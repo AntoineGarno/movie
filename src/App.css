@@ -46,6 +46,10 @@ li {
   height: 5em;
 }
 
+.MuiPagination-text{
+  color: white;
+}
+
 a {
   margin: 25px;
   padding: 10px;
@@ -205,11 +209,13 @@ a:hover {
 
 }
 
+
+
 .bgDetails {
   position: absolute;
   width: 100%;
   z-index: -1;
-  opacity: 20%;
+  opacity: 50%;
   top: 0;
   left: 0;
   object-fit: cover;

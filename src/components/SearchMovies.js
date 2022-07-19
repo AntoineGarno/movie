@@ -2,6 +2,10 @@ import axios from "axios";
 import React from "react";
 import Movie from "./Movie";
 import { useEffect, useState } from "react";
+import Typography from "@mui/material/Typography";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 // const BASE_URL = (base,result) =>  `https://api.themoviedb.org/3/${base}?api_key=23864b640ca2d076f531ea8f5539d1c0${result} `
 
@@ -9,6 +13,22 @@ const SearchMovies = () => {
   const [pop, setPop] = useState([]);
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
+
+  // Pagination
+  const theme = createTheme({
+    palette: {
+      text: {
+        primary: "#fffff",
+      },
+      secondary: {
+        main: "#ffffff",
+      },
+    },
+  });
+
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
 
   const baseSearch = () => {
     axios
@@ -57,14 +77,19 @@ const SearchMovies = () => {
 
         {/* <button onClick={search}>Submit</button> */}
       </form>
-      <div className="d-flex flex-row justify-content-center my-3">
-        <button onClick={() => setPage((page) => page - 1)}>Back</button>
-        <div className="d-flex flex-row">
-          <p> {page - 1} . </p>
-          <p> ( {page} ) </p>
-          <p> . {page + 1} </p>
-        </div>
-        <button onClick={() => setPage((page) => page + 1)}>Next</button>
+      <div className="d-flex flex-row justify-content-center my-3 ">
+        <ThemeProvider theme={theme}>
+          <Stack spacing={2}>
+            <Typography>Page: {page}</Typography>
+            <Pagination
+              count={50}
+              page={page}
+              onChange={handleChange}
+              color="secondary"
+              variant="text"
+            />
+          </Stack>
+        </ThemeProvider>
       </div>
 
       {

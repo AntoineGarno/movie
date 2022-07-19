@@ -6,11 +6,15 @@ import instagram from "../images/instagram.png";
 const Footer = () => {
   return (
     <div className="footer m-2 p-1">
-      <div className="container-fluid">
-
+      <div className="">
         <div className="m-2 text-muted">
-          <p className="mt-4">Data des titres de film, crédits, et images obtenue par TMDB |Video, poster art et bande annonces obtenue par TMDB</p>
-          <p>® Ariane Bordeleau | Antoine Garneau | Maxime Routhier-Linteau ®</p>
+          <p className="mt-4">
+            Data des titres de film, crédits, et images obtenue par TMDB |Video,
+            poster art et bande annonces obtenue par TMDB
+          </p>
+          <p>
+            ® Ariane Bordeleau | Antoine Garneau | Maxime Routhier-Linteau ®
+          </p>
         </div>
 
         <div className="m-4">
@@ -25,9 +29,14 @@ const Footer = () => {
           </a>
         </div>
         <div className="row m-2 p-1">
-          <p>Carrières | FAQ | À Propos de AMDB | Aide et support |   Contact</p>
-          <p>| Ne pas vendre mes informations | Politique de confidentialité | Paramètres des Cookies |  Terme d'utilisation | TMDB</p>
-          <p className="text-muted">© 2022 AMDB, FILM DATABASE COMPANY. TOUS DROITS RÉSERVÉS.</p>
+          <p>Carrières | FAQ | À Propos de AMDB | Aide et support | Contact</p>
+          <p>
+            | Ne pas vendre mes informations | Politique de confidentialité |
+            Paramètres des Cookies | Terme d'utilisation | TMDB
+          </p>
+          <p className="text-muted">
+            © 2022 AMDB, FILM DATABASE COMPANY. TOUS DROITS RÉSERVÉS.
+          </p>
         </div>
       </div>
     </div>

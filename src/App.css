@@ -8,7 +8,6 @@
 }
 
 body {
-
   margin: 0 auto;
   text-align: center;
   color: #ffffff;
@@ -42,8 +41,6 @@ li {
 
 .navigation {
   background-color: #1F1F21;
-  display: flex;
-  justify-content: center;
   align-items: center;
   font-family: 'Archivo Black', sans-serif;
   height: 5em;
@@ -57,8 +54,6 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
-
 
 a:hover {
   color: #7F5AF0;
@@ -76,7 +71,7 @@ a:hover {
   color: #7f5af0;
 }
 
-                                                                                          /*Fiche Actor*/
+/*Fiche Actor*/
 .images {
   width: 200px;
   border-radius: 10px;
@@ -84,7 +79,8 @@ a:hover {
 
 /*Sizing de l'image de l'acteur*/
 .imageActor {
-  width: 330px;
+  width: 300px;
+  border-radius: 20px;
 }
 
 /*Lien dans la page actor ex: Resume Bande announce etc..*/
@@ -116,9 +112,7 @@ a:hover {
   margin-top: -21px;
 }
 
-#ConnuPour {
-
-}
+#ConnuPour {}
 
 /*Hr du bas de la fiche acteur*/
 .hr2 {
@@ -129,7 +123,7 @@ a:hover {
 
 /*Gestion de L'espace pour les h4 fiche acteur*/
 .filmographie {
-  padding: 0px 0px 0px 38px;
+  padding: 0px 0px 0px 21px;
   margin: 0px 50em 0px 0px;
 }
 
@@ -140,8 +134,6 @@ a:hover {
   height: 3px;
 }
 
-
-
 #tableActor td,
 #tableActor th {
   border: 1px solid #ddd;
@@ -150,13 +142,14 @@ a:hover {
 
 
 .tableFilmographie {
-  margin: 2em 0em 3em 5em;
+  margin: 2em 0em 3em 4em;
 }
 
 #tableActor th {
   padding: 10px 20px 10px 20px;
 }
-                                                                                /*Fin Fiche Acteur*/
+
+/*Fin Fiche Acteur*/
 .overlay {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
@@ -185,16 +178,17 @@ a:hover {
   opacity: 1;
 }
 
-                                                                                          /*Footer*/
+/*Footer*/
 .footer {
   background-color: #16161A;
   /*display: none;*/
 }
 
-                                                                                          /*FIN Footer*/
+/*FIN Footer*/
 .main {
   grid-area: main;
 }
+
 .movieDescription {
   display: flex;
   flex-direction: row;
@@ -261,4 +255,17 @@ a:hover {
   font-weight: 700;
   text-align: left;
   margin-left: 2em;
+}
+
+/*NAVIGATION MOBILE */
+
+@media screen and (max-width: 600px) {
+  .navigation a {
+   display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
 }

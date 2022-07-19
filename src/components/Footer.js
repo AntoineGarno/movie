@@ -6,7 +6,7 @@ import instagram from "../images/instagram.png";
 const Footer = () => {
   return (
     <div className="footer m-2 p-1">
-      <div className="container">
+      <div className="container-fluid">
 
         <div className="m-2 text-muted">
           <p className="mt-4">Data des titres de film, crédits, et images obtenue par TMDB |Video, poster art et bande annonces obtenue par TMDB</p>

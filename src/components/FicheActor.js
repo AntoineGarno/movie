@@ -46,7 +46,7 @@ const FicheActor = (props) => {
 
         <div className="row">
           <div className="row m-4">
-          <ul className="d-flex flex-row p-md-1 m-3 col-md-2 col-lg-5  liActor">
+          <ul className="d-flex flex-row p-md-1 m-3 col-md-2 col-lg-5 liActor">
             <li className="pt-1 mx-auto col-md-1 col-lg-3">Résumé</li>
             <li className="pt-1 d-md-none d-lg-block col-lg-3">Bande annonces</li>
             <li className="pt-1 m col-md-1 col-lg-3">Vidéos</li>
@@ -64,8 +64,8 @@ const FicheActor = (props) => {
 
           <hr className="hr" />
           <div className="row">
-            <div className="col-5 d-inline-flex flex-row justify-content-evenly filmographie">
-              <h4 className="py-2 ">Connu pour</h4>
+            <div className="d-inline-flex flex-row justify-content-evenly filmographie col-5 py-3">
+              <h4 className="py-2 px-5 mx-5">Connu pour</h4>
               <span class="mt-4 degrade-horizontal"></span>
             </div>
           </div>
@@ -81,7 +81,7 @@ const FicheActor = (props) => {
 
           <div className="row">
             <div className="col-5 d-inline-flex flex-row justify-content-evenly filmographie ">
-              <h4 className="py-2 mx-4">Filmographie</h4>
+              <h4 className="py-2 px-5 mx-5">Filmographie</h4>
               <span class="mt-4 degrade-horizontal"></span>
             </div>
             <div className="col-1 d-flex flex-row">
@@ -141,8 +141,8 @@ const FicheActor = (props) => {
         </div>
         <div className="row">
           <div className="col-5 mx-2  d-inline-flex flex-row justify-content-evenly filmographie">
-            <h4 className="py-2">Photos</h4>
-            <span class="mt-4 degrade-horizontal"></span>
+            <h4 className="py-2 px-3">Photos</h4>
+            <span class="mt-4 mx-4 degrade-horizontal"></span>
           </div>
         </div>
         <div className="row col-lg-12 col-sm-6 m-4 ">
@@ -152,9 +152,6 @@ const FicheActor = (props) => {
             <div className="col-1"></div>
           </div>
         </div>
-        <footer>
-          <div></div>
-        </footer>
       </div>
     </div>
   );

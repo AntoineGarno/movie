@@ -16,13 +16,13 @@ const SimilarMovies = (props) => {
       )
       .then((res) => setPop(res.data.results));
   }, [refreshPage]);
-  console.log(pop);
   function refreshPage() {
     window.location.reload(false);
   }
 
   return (
     <div className="row target">
+      <h1>Films Similaires</h1>
       {pop
         .filter((movie, index) => index < 4)
         .map((movie) => (

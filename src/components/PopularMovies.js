@@ -41,7 +41,7 @@ const PopularMovies = () => {
     <div className="row main">
       {
         <div className="row target">
-          {pop.map((movie) => (
+          {pop.map((movie, index) => (
             <Movie movie={movie} key={movie.id} />
           ))}
         </div>

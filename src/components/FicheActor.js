@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import ActorMovies from "./ActorMovies";
+import ActorPhotos from "./ActorPhotos";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import imgNotFound from "../images/imgNotFound.jpg";
@@ -11,8 +12,8 @@ const FicheActor = (props) => {
     axios
       .get(
         "https://api.themoviedb.org/3/person/" +
-        props.id +
-        "?api_key=a67b57849deb687f2cd49d7a8298b366"
+          props.id +
+          "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
   }, []);
@@ -38,28 +39,38 @@ const FicheActor = (props) => {
           <h2 className="pb-1">{pop.name}</h2>
           <h3 className="py-3">Biographie</h3>
           <p className="pb-4 col-sm- col-md-6 col-lg-10">{pop.biography}</p>
-          <strong><p>Date de naissance</p></strong>
+          <strong>
+            <p>Date de naissance</p>
+          </strong>
           <p>{pop.birthday}</p>
-          <strong><p>Lieu de naissance</p></strong>
+          <strong>
+            <p>Lieu de naissance</p>
+          </strong>
           <p className="text-danger">METTRE LIEU DE NAISSANCE CI DANS API</p>
         </div>
 
         <div className="row">
           <div className="row m-4">
-          <ul className="d-flex flex-row p-md-1 m-3 col-md-2 col-lg-5  liActor">
-            <li className="pt-1 mx-auto col-md-1 col-lg-3">Résumé</li>
-            <li className="pt-1 d-md-none d-lg-block col-lg-3">Bande annonces</li>
-            <li className="pt-1 m col-md-1 col-lg-3">Vidéos</li>
-            <li className="pt-1 d-md-none d-lg-block col-lg-3">Photos</li>
-          </ul>
-
-          <div className="px-4 col-md-4 col-lg-6">
-            <ul className="d-flex justify-content-start flex-row p-2 ml-4 col-lg-6 ">
-              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Acteur</li>
-              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Directeur</li>
-              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Producteur</li>
+            <ul className="d-flex flex-row p-md-1 m-3 col-md-2 col-lg-5  liActor">
+              <li className="pt-1 mx-auto col-md-1 col-lg-3">Résumé</li>
+              <li className="pt-1 d-md-none d-lg-block col-lg-3">
+                Bande annonces
+              </li>
+              <li className="pt-1 m col-md-1 col-lg-3">Vidéos</li>
+              <li className="pt-1 d-md-none d-lg-block col-lg-3">Photos</li>
             </ul>
-          </div>
+
+            <div className="px-4 col-md-4 col-lg-6">
+              <ul className="d-flex justify-content-start flex-row p-2 ml-4 col-lg-6 ">
+                <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Acteur</li>
+                <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">
+                  Directeur
+                </li>
+                <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">
+                  Producteur
+                </li>
+              </ul>
+            </div>
           </div>
 
           <hr className="hr" />
@@ -148,7 +159,7 @@ const FicheActor = (props) => {
         <div className="row col-lg-12 col-sm-6 m-4 ">
           <div className="col-1"></div>
           <div className=" col-10 d-flex flex-row">
-            <ActorMovies id={props.id} />
+            <ActorPhotos id={props.id} />
             <div className="col-1"></div>
           </div>
         </div>

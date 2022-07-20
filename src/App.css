@@ -115,6 +115,7 @@ a:hover {
 .liActor li {
   border-bottom: 1px solid #1B1A1A;
   font-size: 1.2em;
+  padding-bottom: 30px;
 }
 
 /*Le Hover orange des liens */
@@ -122,6 +123,7 @@ a:hover {
   color: #FFBB00;
   border-bottom: 1px solid #FFBB00;
   cursor: pointer;
+  padding-bottom: 30px;
 }
 
 /*Badge de Couleur mauve (PROBLEM AVEC LE RADIUS)*/
@@ -137,15 +139,14 @@ a:hover {
 /*Hr du haut de la fiche acteur*/
 .hr {
   color: #FFBB00;
-  margin-top: -21px;
+  margin-top: -44px;
 }
 
-#ConnuPour {}
 
 /*Hr du bas de la fiche acteur*/
 .hr2 {
   color: #FFBB00;
-  margin-top: 30px;
+  margin: 42px 0 50px 0;
   width: 2000px;
 }
 
@@ -170,7 +171,7 @@ a:hover {
 
 
 .tableFilmographie {
-  margin: 2em 0em 3em 4em;
+  margin: 2em 0em 3em 7em;
 }
 
 #tableActor th {
@@ -207,13 +208,15 @@ a:hover {
 }
 
 /*Footer*/
+
 .footer {
-  background-color: #16161A;
-  width: 100%;
-  position: absolute;
   left: 0;
-  right: 0;
-  /*display: none;*/
+  bottom: 0;
+  width: 100%;
+  background-color: #16161A;
+  color: white;
+  text-align: center;
+  top: 0%;
 }
 
 /*FIN Footer*/

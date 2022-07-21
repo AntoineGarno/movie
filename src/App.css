@@ -46,7 +46,7 @@ li {
   height: 5em;
 }
 
-.MuiPagination-text{
+.MuiPagination-text {
   color: white;
 }
 
@@ -102,15 +102,14 @@ a:hover {
   padding-bottom: 30px;
 }
 
-/*Badge de Couleur mauve (PROBLEM AVEC LE RADIUS)*/
+/*Badge de Couleur mauve */
 .actoreBadge {
   color: rgb(255, 255, 255);
   border: 2px solid #7F5AF0;
-  display: inline-block;
-  cursor: pointer;
   border-radius: 10px;
-  margin-bottom: 2%;
+  margin: 0 0 0 35px ;
 }
+
 
 /*Hr du haut de la fiche acteur*/
 .hr {
@@ -128,8 +127,17 @@ a:hover {
 
 /*Gestion de L'espace pour les h4 fiche acteur*/
 .filmographie {
+  padding: 0px 0px 0px 30px;
+  margin: 0px 0em 0px 0px;
+}
+
+#filmographie {
   padding: 0px 0px 0px 21px;
-  margin: 0px 50em 0px 0px;
+  margin: 0px 0px 0px -13px;
+}
+
+#connuPour {
+  margin: 0px 0px -45px -25px;
 }
 
 /*Ligne Orange en Degrader*/
@@ -271,15 +279,22 @@ a:hover {
 }
 
 .badgeMauve {
-  margin: 0px 0px 50px 274px;;
-  
+  margin: 0px 0px 50px 444px;
+
+}
+
+.imageActorZoneMobile {
+  margin: 30px 10px 0 10px;
+  max-width: fit-content;
+  display: none;
+
 }
 
 /*NAVIGATION MOBILE */
 
 @media screen and (max-width: 985px) {
   .navigation {
-   display: none;
+    display: none;
   }
 
 
@@ -301,5 +316,69 @@ a:hover {
 
   .footer {
     width: 45%;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .navigation {
+    display: none;
+  }
+
+  .badgeMauve {
+    margin: 0px 0px 30px 175px;
+    font-size: 12px;
+  }
+
+  .actoreBadge {
+   margin: 0 7px 0 18px;
+  }
+
+  .degrade-horizontal {
+    background: linear-gradient(to right, #FFBB00, #020916);
+    width: 500px;
+    height: 3px;
+  }
+
+  .tableFilmographie {
+    margin: 12px 126px 25px 103px;
+    width: 54%;
+  }
+
+  .footer {
+    width: 34%;
+  }
+
+  .imageActor {
+    margin-top: 26px;
+    width: 85%;
+  }
+
+  #innerTextCard {
+    margin: 30px 10px 0 10px;
+    overflow: clip;
+    font-size: 14px;
+  }
+
+  .imageActorZone {
+    display: none;
+  }
+
+  .imageActorZoneMobile {
+    margin: 30px 10px 0 10px;
+    max-width: fit-content;
+    display: block;
+  }
+
+  .tableFilmographie {
+    margin: 12px 126px 25px 23px;
+    width: 48%;
+  }
+
+  .filmographie {
+    margin: 0px 1em 11px -84px;
+  }
+
+  #connuPour {
+    margin: -1px 18px -48px -89px;
   }
 }

@@ -270,15 +270,36 @@ a:hover {
   margin-left: 2em;
 }
 
+.badgeMauve {
+  margin: 0px 0px 50px 274px;;
+  
+}
+
 /*NAVIGATION MOBILE */
 
-@media screen and (max-width: 600px) {
-  .navigation a {
+@media screen and (max-width: 985px) {
+  .navigation {
    display: none;
   }
 
-  .topnav a.icon {
-    float: right;
-    display: block;
+
+  .badgeMauve {
+    margin: 0px 0px 3em 275px;
+
+  }
+
+  .degrade-horizontal {
+    background: linear-gradient(to right, #FFBB00, #020916);
+    width: 500px;
+    height: 3px;
+  }
+
+  .tableFilmographie {
+    margin: 12px 126px 25px 103px;
+    width: 54%;
+  }
+
+  .footer {
+    width: 45%;
   }
 }

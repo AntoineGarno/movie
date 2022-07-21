@@ -21,10 +21,10 @@ const ActorMovies = (props) => {
   return (
     <div className="container d-flex justify-content-around">
       {pop
-        .filter((movie, index) => index < 4)
+        .filter((movie, index) => index < 6)
         .map((movie) => (
           <div className="row">
-            <div>
+            <div className="actorMovieComp mx-2">
               <Movie movie={movie} key={movie.id} />
               <div className="bg-dark mx-3 p-1">{movie.title}</div>
             </div>

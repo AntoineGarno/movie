@@ -5,7 +5,7 @@ import logo from "../logo.png";
 const Navigation = () => {
   return (
     <div>
-      <div className="d-flex align-items-center container-fluid p-3">
+      <div className="d-flex align-items-center container-fluid p-3 navigation">
         <div className="col-sm-1 col-md-1 col-lg-4 ">
           <NavLink exact to="/" activeClassName="nav-active">
             <img src={logo} alt="Logo" className="logo" />

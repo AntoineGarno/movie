@@ -15,16 +15,20 @@ const Review = (props) => {
       )
       .then((res) => setPop(res.data.results));
   }, []);
-  console.log(pop);
 
   return (
-    <div className="">
-      {pop.map((movie) => (
-        <div className="review">
-          <h3>{movie.author}</h3>
-          <p>{movie.content}</p>
-        </div>
-      ))}
+    <div className=" d-flex row flex-column">
+      {pop
+        .filter((movie, index) => index < 2)
+        .map((movie) => (
+          <div className="review col d-flex flex-row">
+            <div className="d-flex flex-column ">
+              <h3>{movie.author}</h3>
+              <p>Écris le {movie.updated_at}</p>
+            </div>
+            <p>{movie.content}</p>
+          </div>
+        ))}
     </div>
   );
 };

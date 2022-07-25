@@ -11,8 +11,8 @@ const FicheActor = (props) => {
     axios
       .get(
         "https://api.themoviedb.org/3/person/" +
-        props.id +
-        "?api_key=a67b57849deb687f2cd49d7a8298b366"
+          props.id +
+          "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
   }, []);

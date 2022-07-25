@@ -81,6 +81,30 @@ a:hover {
   border-radius: 10px;
 }
 
+.imageDetails{
+  width: 300px;
+  height: 50vh;
+}
+
+.rating{
+  background-color: #000000;
+  border: 3px solid #7f5af0;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rating p{
+ text-align: center;
+ font-weight: 500;
+ font-size: 2em;
+}
+.main-info{
+  height: 60vh;
+}
+
 /*Sizing de l'image de l'acteur*/
 .imageActor {
   width: 300px;
@@ -222,6 +246,7 @@ a:hover {
 .bgDetails {
   position: absolute;
   width: 100%;
+  height: 75%;
   z-index: -1;
   opacity: 50%;
   top: 0;
@@ -261,7 +286,9 @@ a:hover {
 }
 
 .review {
-  margin: 5em;
+  margin:  1em auto;
+ 
+  border: 2px solid #FFBB00;
 }
 
 .review>p,
@@ -274,7 +301,7 @@ a:hover {
 .review>h3 {
   color: #7f5af0;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
   margin-left: 2em;
 }
 

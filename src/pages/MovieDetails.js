@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import Details from "../components/Details";
 import Review from "../components/Review";
 import SimilarMovies from "../components/SimilarMovies";
+import Trailer from "../components/Trailer";
 
 const MovieDetails = () => {
   const { slug } = useParams();
@@ -15,9 +16,11 @@ const MovieDetails = () => {
       <Navigation />
       <div className="container">
         <Details id={slug} />
+        {/* <Trailer id={slug} /> */}
         <Actors id={slug} />
         <SimilarMovies id={slug} />
         <Review id={slug} />
+
         <Footer />
       </div>
     </div>

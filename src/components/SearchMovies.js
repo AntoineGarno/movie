@@ -94,7 +94,7 @@ const SearchMovies = () => {
 
       {
         <div className="row target main">
-          {pop.map((movie) => (
+          {pop.map((movie, index) => (
             <Movie movie={movie} key={movie.id} />
           ))}
         </div>

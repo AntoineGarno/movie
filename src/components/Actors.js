@@ -16,19 +16,16 @@ const Actors = (props) => {
       )
       .then((res) => setPop(res.data.cast));
   }, [refreshPage]);
-  console.log(props);
   function refreshPage() {
     window.location.reload(false);
   }
 
   return (
     <div className=" row actors">
-      <h1>{pop.title}</h1>
+      <h1>Acteurs</h1>
       {pop
         .filter((actor) => actor.order < 5)
         .map((actor) => {
-          console.log(actor);
-
           return (
             <NavLink className="col" exact to={"/actordetails/" + actor.id}>
               <img

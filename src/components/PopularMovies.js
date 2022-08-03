@@ -38,7 +38,7 @@ const PopularMovies = () => {
   console.log(page);
 
   return (
-    <div className="row main">
+    <div className="row main m-5">
       {
         <div className="row target">
           {pop.map((movie, index) => (

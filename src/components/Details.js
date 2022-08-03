@@ -13,8 +13,8 @@ const Details = (props) => {
     axios
       .get(
         "https://api.themoviedb.org/3/movie/" +
-          props.id +
-          "?api_key=a67b57849deb687f2cd49d7a8298b366"
+        props.id +
+        "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
     console.log(pop.id);
@@ -33,7 +33,7 @@ const Details = (props) => {
   }
 
   return (
-    <div>
+    <div className="">
       <div className="main row d-flex my-5 main-info">
         <img
           className="bgDetails "
@@ -48,18 +48,18 @@ const Details = (props) => {
               currentTarget.onerror = null; // prevents looping
               currentTarget.src = imgNotFound;
             }}
-            className="imageDetails col-4"
+            className="imageDetails img-fluid"
           />
-          <div className=" flex-column col-7  d-flex align-items-start px-5">
-            <h1 className="d-flex align-items-start mb-5">{pop.title}</h1>
+          <div className="flex-column col-6 d-flex align-items-start px-5 detailContent">
+            <h1 className="d-flex align-items-start mb-3">{pop.title}</h1>
             <p lassName="d-flex align-items-start my-5">{pop.release_date}</p>
             <p>{timeConvert(pop.runtime)} </p>
-            <button className=" bg-warning my-5 p-2 px-3 border-0 rounded-pill text-light">
+            <button className=" bg-warning p-2 px-3 border-0 rounded-pill text-light btn-details">
               <i class="fa fa-play-circle-o px-2" aria-hidden="true"></i>
               Bande annonce
             </button>
           </div>
-          <div className="col-1">
+          <div className="col-2">
             <div className="rating">
               <p className="p-0 m-0">{pop.vote_average * 10}%</p>
             </div>
@@ -67,28 +67,37 @@ const Details = (props) => {
         </div>
       </div>
 
-      <div className="row ">
-        <ul className="d-flex flex-row p-md-1  col-md-2 col-lg-5  liActor">
-          <li className="pt-1 m col-md-1 col-lg-3">Résumé</li>
-          <li className="pt-1 m col-md-1 col-lg-3">Vidéos</li>
-          <li className="pt-1 m col-md-1 col-lg-3">Photos</li>
-        </ul>
-
-        <div className="px-4 col-md-4 col-lg-6">
-          <ul className="d-flex justify-content-start flex-row p-2 ml-4 col-lg-6 ">
-            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Acteur</li>
-            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Directeur</li>
-            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Producteur</li>
+      <div className="container-fluid">
+        <div className="row mx-5">
+          <ul className="d-flex flex-row p-md-1 col-md-2 col-lg-3 liActor mx-4 mt-2">
+            <li className="pt-1 m col-md-1 col-lg-3">Résumé</li>
+            <li className="pt-1 m col-md-1 col-lg-3">Vidéos</li>
+            <li className="pt-1 m col-md-1 col-lg-3">Photos</li>
           </ul>
+
+          <div className="px-4 col-md-4 col-lg-6">
+            <ul className="d-flex justify-content-start flex-row p-2 col-lg-6">
+              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Acteur</li>
+              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Directeur</li>
+              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Producteur</li>
+            </ul>
+          </div>
         </div>
       </div>
-
+      <hr className="hr my-1" id="hrDetails" />
       <div className="main row d-flex my-5">
-        <div className="col-4">
+        <div className="col-4 detailContainer m-5">
           <p>{pop.overview}</p>
         </div>
-        <div className="col-8">
+
+        <div className="col-7 video-mask">
           <Trailer id={slug} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="d-inline-flex flex-row filmographie py-3 " id="FilmoActeurs">
+          <h4 className="py-2 mx-2 ">Acteurs</h4>
+          <span class="mt-4 degrade-horizontal"></span>
         </div>
       </div>
     </div>

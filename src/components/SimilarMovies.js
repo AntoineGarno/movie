@@ -22,9 +22,8 @@ const SimilarMovies = (props) => {
 
   return (
     <div className="row target">
-      <h1>Films Similaires</h1>
       {pop
-        .filter((movie, index) => index < 4)
+        .filter((movie, index) => index < 5)
         .map((movie) => (
           <div className="col">
             <Movie movie={movie} key={movie.id} onClick={refreshPage} />

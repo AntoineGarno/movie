@@ -45,14 +45,14 @@ const CategoriesList = () => {
 
   return (
     <div>
-      <div className=" categorie">
+      <div className="categorie my-5">
         {genre.map((genre, index) => (
           <button value={genre.id} onClick={(e) => setId(e.target.value)}>
             {genre.name}
           </button>
         ))}
       </div>
-      <div className="d-flex flex-row justify-content-center my-3 ">
+      <div className="d-flex flex-row justify-content-center m-5 ">
         <ThemeProvider theme={theme}>
           <Stack spacing={2}>
             <Typography>Page: {page}</Typography>

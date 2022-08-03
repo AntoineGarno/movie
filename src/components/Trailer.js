@@ -17,19 +17,19 @@ const Trailer = (props) => {
     window.location.reload(false);
   }
   return (
-    <div className="d-flex flex-lg-row flex-sm-column">
+    <div className="d-flex flex-lg-row flex-sm-column justify-content-center m-2">
       {pop
-        .filter((movie, index) => index < 2)
+        .filter((movie, index) => index < 1)
         .map((movie, index) => (
           <iframe
-            width="560"
-            height="315"
+            width="1300"
+            height="700"
             src={"https://www.youtube.com/embed/" + movie.key}
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-            className="m-3"
+            className="mx-3 d-flex flex-column"
           ></iframe>
         ))}
     </div>

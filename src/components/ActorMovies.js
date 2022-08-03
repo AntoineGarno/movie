@@ -21,7 +21,7 @@ const ActorMovies = (props) => {
   return (
     <div className="container d-flex justify-content-around">
       {pop
-        .filter((movie, index) => index < 6)
+        .filter((movie, index) => index < 5)
         .map((movie) => (
           <div className="row">
             <div className="actorMovieComp mx-2">

@@ -14,15 +14,23 @@ const MovieDetails = () => {
   return (
     <div>
       <Navigation />
-      <div className="container">
+      <div className="containe-fluid">
+        <div className="row">
         <Details id={slug} />
+        </div>
         {/* <Trailer id={slug} /> */}
         <Actors id={slug} />
+        <div className="row">
+        <div className="d-inline-flex flex-row filmographie py-3 " id="FilmoActeurs">
+          <h4 className="py-2 mx-2 ">Films Similaires</h4>
+          <span class="mt-4 degrade-horizontal"></span>
+        </div>
+      </div>
         <SimilarMovies id={slug} />
         <Review id={slug} />
 
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };

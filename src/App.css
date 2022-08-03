@@ -82,8 +82,9 @@ a:hover {
 }
 
 .imageDetails{
-  width: 300px;
+  width: 380px;;
   height: 50vh;
+  margin: 0px 0 0 130px;
 }
 
 .rating{
@@ -99,7 +100,7 @@ a:hover {
 .rating p{
  text-align: center;
  font-weight: 500;
- font-size: 2em;
+ font-size: 21px;
 }
 .main-info{
   height: 60vh;
@@ -156,12 +157,12 @@ a:hover {
 }
 
 #filmographie {
-  padding: 0px 0px 0px 21px;
+  padding: 0px 0px 0px 48px;
   margin: 0px 0px 0px -13px;
 }
 
 #connuPour {
-  margin: 0px 0px -45px -25px;
+  margin: 0px 0px -45px -8px;
 }
 
 /*Ligne Orange en Degrader*/
@@ -241,8 +242,6 @@ a:hover {
 
 }
 
-
-
 .bgDetails {
   position: absolute;
   width: 100%;
@@ -255,8 +254,13 @@ a:hover {
 }
 
 .actorImg {
-  width: 100px;
+  width: 250px;
   margin: 0;
+}
+
+.barActor {
+  margin: 0px 65px;
+  padding: 10px 74px;
 }
 
 .categorie button {
@@ -306,7 +310,7 @@ a:hover {
 }
 
 .badgeMauve {
-  margin: 0px 0px 50px 444px;
+  margin: 0px 0px 50px 425px;
 
 }
 
@@ -314,10 +318,37 @@ a:hover {
   margin: 30px 10px 0 10px;
   max-width: fit-content;
   display: none;
-
 }
 
-/*NAVIGATION MOBILE */
+.liActorDetail {
+  margin: 9px -280px 0px 179px;
+}
+
+.detailContent {
+  margin: 46px 0 0 0px;
+}
+
+.btn-details {
+  margin: 0 0 0 0;
+}
+
+#badgeMauve {
+  margin: 20px 0px 20px 40em;
+}
+
+.detailContainer{
+  margin: 0 0 0 0;
+  padding: 0px 0px 0px 77px;
+  font-size: 2vh;
+}
+
+#FilmoActeurs {
+  margin: 0 0 0 110px;
+}
+
+#hrDetails {
+  margin: -20px 0 0 0;
+}
 
 @media screen and (max-width: 985px) {
   .navigation {
@@ -342,8 +373,21 @@ a:hover {
   }
 
   .footer {
-    width: 45%;
+    width: 100%;
   }
+
+  .imageDetails {
+    margin: 0 0 0 50px;
+  }
+
+  .detailContent {
+    margin: 46px 0 0 0px;
+  }
+
+  .rating {
+    margin: -32em 5em 0em 49em;
+  }
+ 
 }
 
 @media screen and (max-width: 765px) {
@@ -405,7 +449,14 @@ a:hover {
     margin: 0px 1em 11px -84px;
   }
 
+  #filmographie {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px -74px;
+  }
+
   #connuPour {
     margin: -1px 18px -48px -89px;
   }
+
+ 
 }

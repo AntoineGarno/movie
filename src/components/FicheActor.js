@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import ActorMovies from "./ActorMovies";
+import ActorPhotos from "./ActorPhotos";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import imgNotFound from "../images/imgNotFound.jpg";
@@ -20,7 +21,7 @@ const FicheActor = (props) => {
   console.log(pop);
 
   return (
-    <div className="main container-fluid">
+    <div className="main container-fluid my-4">
       <div className="row">
         <div className="col-sm-1 col-md-2 col-lg-3 m-2 imageActorZone" >
           <img
@@ -149,7 +150,7 @@ const FicheActor = (props) => {
         <div className="row col-lg-12 col-sm-6 m-4 ">
           <div className="col-1"></div>
           <div className=" col-10 d-flex flex-row">
-            <ActorMovies id={props.id} />
+            <ActorPhotos id={props.id} />
             <div className="col-1"></div>
           </div>
         </div>

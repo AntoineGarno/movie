@@ -21,15 +21,14 @@ const Actors = (props) => {
   }
 
   return (
-    <div className=" row actors">
-      <h1>Acteurs</h1>
+    <div className=" row actors m-5">
       {pop
         .filter((actor) => actor.order < 5)
         .map((actor) => {
           return (
             <NavLink className="col" exact to={"/actordetails/" + actor.id}>
               <img
-                className="actorImg"
+                className="actorImg "
                 src={"https://image.tmdb.org/t/p/w200" + actor.profile_path}
                 alt=""
                 onError={({ currentTarget }) => {
@@ -37,7 +36,7 @@ const Actors = (props) => {
                   currentTarget.src = imgNotFound;
                 }}
               />
-              <p>{actor.original_name}</p>
+              <p className="bg-dark barActor">{actor.original_name}</p>
             </NavLink>
           );
         })}

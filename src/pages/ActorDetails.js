@@ -12,7 +12,6 @@ const ActorDetails = () => {
     <div>
       <Navigation />
       <FicheActor id={slug} />
-
       <Footer />
     </div>
   );

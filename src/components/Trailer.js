@@ -17,13 +17,13 @@ const Trailer = (props) => {
     window.location.reload(false);
   }
   return (
-    <div className="d-flex flex-lg-row flex-sm-column justify-content-center m-2">
+    <div className="d-flex flex-lg-row flex-sm-column justify-content-center">
       {pop
         .filter((movie, index) => index < 1)
         .map((movie, index) => (
           <iframe
-            width="1300"
-            height="700"
+            width="800"
+            height="600"
             src={"https://www.youtube.com/embed/" + movie.key}
             title="YouTube video player"
             frameborder="0"

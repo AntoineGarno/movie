@@ -26,8 +26,11 @@ const MovieDetails = () => {
           <span class="mt-4 degrade-horizontal"></span>
         </div>
       </div>
-        <SimilarMovies id={slug} />
-        <Review id={slug} />
+        <div className="p-3 m-3">
+          <SimilarMovies id={slug} />
+           <h2 className="mt-5 p-3 h3Review">Top Review</h2>
+          <Review id={slug}  />
+        </div>
 
       </div>
       <Footer />

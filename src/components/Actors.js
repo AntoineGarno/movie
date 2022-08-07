@@ -23,7 +23,7 @@ const Actors = (props) => {
   return (
     <div className=" row actors m-5">
       {pop
-        .filter((actor) => actor.order < 5)
+        .filter((actor) => actor.order < 4)
         .map((actor) => {
           return (
             <NavLink className="col" exact to={"/actordetails/" + actor.id}>

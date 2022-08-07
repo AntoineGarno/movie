@@ -17,16 +17,16 @@ const Review = (props) => {
   }, []);
 
   return (
-    <div className=" d-flex row flex-column">
+    <div className=" d-flex row flex-column ">
       {pop
-        .filter((movie, index) => index < 2)
+        .filter((movie, index) => index < 3)
         .map((movie) => (
-          <div className="review col d-flex flex-row">
+          <div className="review col d-flex p-3">
             <div className="d-flex flex-column ">
-              <h3>{movie.author}</h3>
-              <p>Écris le {movie.updated_at}</p>
+              <h3 className="p-3">{movie.author}</h3>
+              <p className="p-3">Écris le {movie.updated_at}</p>
             </div>
-            <p>{movie.content}</p>
+            <p className="p-3 col-10 reviewContent">{movie.content}</p>
           </div>
         ))}
     </div>

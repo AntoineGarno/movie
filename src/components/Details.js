@@ -52,7 +52,7 @@ const Details = (props) => {
           />
           <div className="flex-column col-6 d-flex align-items-start px-5 detailContent">
             <h1 className="d-flex align-items-start mb-3">{pop.title}</h1>
-            <p lassName="d-flex align-items-start my-5">{pop.release_date}</p>
+            <p  className="d-flex align-items-start my-5">{pop.release_date}</p>
             <p>{timeConvert(pop.runtime)} </p>
             <button className=" bg-warning p-2 px-3 border-0 rounded-pill text-light btn-details">
               <i class="fa fa-play-circle-o px-2" aria-hidden="true"></i>

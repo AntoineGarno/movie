@@ -21,7 +21,7 @@ const Actors = (props) => {
   }
 
   return (
-    <div className=" row actors m-5">
+    <div className=" row mx-5 px-3">
       {pop
         .filter((actor) => actor.order < 4)
         .map((actor) => {

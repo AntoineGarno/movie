@@ -50,7 +50,7 @@ const Details = (props) => {
             }}
             className="imageDetails img-fluid"
           />
-          <div className="flex-column col-6 d-flex align-items-start px-5 detailContent">
+          <div className="flex-column col-6 d-flex align-items-start  detailContent">
             <h1 className="d-flex align-items-start mb-3">{pop.title}</h1>
             <p  className="d-flex align-items-start my-5">{pop.release_date}</p>
             <p>{timeConvert(pop.runtime)} </p>
@@ -68,29 +68,29 @@ const Details = (props) => {
       </div>
 
       <div className="container-fluid">
-        <div className="row mx-5">
-          <ul className="d-flex flex-row p-md-1 col-md-2 col-lg-3 liActor mx-4 mt-2">
-            <li className="pt-1 m col-md-1 col-lg-3">Résumé</li>
-            <li className="pt-1 m col-md-1 col-lg-3">Vidéos</li>
-            <li className="pt-1 m col-md-1 col-lg-3">Photos</li>
+        <div className="row mx-md-1 mx-5">
+          <ul className="d-flex flex-row p-md-1 col-md-3 col-lg-3 liActor mr-md-4 mx-4 mt-2">
+            <li className="pt-1 m col-md-5 col-lg-3">Résumé</li>
+            <li className="pt-1 m col-md-5 col-lg-3">Vidéos</li>
+            <li className="pt-1 m col-md-5 col-lg-3">Photos</li>
           </ul>
 
-          <div className="px-4 col-md-4 col-lg-6">
+          <div className="px-4 col-md-6 col-lg-6">
             <ul className="d-flex justify-content-start flex-row p-2 col-lg-6">
-              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Acteur</li>
-              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Directeur</li>
-              <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Producteur</li>
+              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">Acteur</li>
+              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">Directeur</li>
+              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">Producteur</li>
             </ul>
           </div>
         </div>
       </div>
       <hr className="hr my-1" id="hrDetails" />
       <div className="main row d-flex my-5">
-        <div className="col-4 detailContainer m-5">
+        <div className=" col-sm-6 col-md-10 col-lg-4 detailContainer m-5">
           <p>{pop.overview}</p>
         </div>
 
-        <div className="col-7 video-mask">
+        <div className=" col-sm-6  col-md-12 col-lg-7 video-mask trailer">
           <Trailer id={slug} />
         </div>
       </div>

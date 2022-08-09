@@ -81,13 +81,14 @@ a:hover {
   border-radius: 10px;
 }
 
-.imageDetails{
-  width: 18%;;
+.imageDetails {
+  width: 18%;
+  ;
   height: 50vh;
   margin: 0px 0 0 130px;
 }
 
-.rating{
+.rating {
   background-color: #000000;
   border: 3px solid #7f5af0;
   border-radius: 50%;
@@ -97,12 +98,14 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-.rating p{
- text-align: center;
- font-weight: 500;
- font-size: 21px;
+
+.rating p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 21px;
 }
-.main-info{
+
+.main-info {
   height: 60vh;
 }
 
@@ -132,7 +135,7 @@ a:hover {
   color: rgb(255, 255, 255);
   border: 2px solid #7F5AF0;
   border-radius: 10px;
-  margin: 0 0 0 35px ;
+  margin: 0 0 0 35px;
 }
 
 
@@ -290,14 +293,92 @@ a:hover {
 }
 
 .review {
-  margin:  3em auto;
-  border: 2px solid #FFBB00;
+  margin: 3em auto;
   display: flex;
   align-items: center;
 }
 
+#testimonials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:100%;
+}
+
+.testimonial-heading{
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-heading span{
+  font-size: 1.3rem;
+  color: #f1f0f0;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.testimonial-box-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width:100%;
+}
+.testimonial-box{
+  width: 800px;
+  padding: 20px;
+  margin: 15px;
+}
+.name-user{
+  display: flex;
+  flex-direction: column;
+}
+.name-user strong{
+  color: #e6dede;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.name-user span{
+  color: #979797;
+  font-size: 0.8rem;
+}
+
+.box-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.client-comment p{
+  font-size: 0.9rem;
+  color: #eeeded;
+}
+.testimonial-box:hover{
+  transform: translateY(-10px);
+  transition: all ease 0.3s;
+}
+
+.btn-review {
+  border-radius: 5px;
+  font-weight: 400;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  background-color: #7f5af0;
+  color: #ffffff;
+}
+
+::selection{
+  color: #ffffff;
+  background-color: #252525;
+}
 .reviewContent {
-  margin:  1em auto;
+  margin: 1em auto;
   color: #c9c9c9;
   font-family: 'Work Sans', sans-serif;
 }
@@ -328,7 +409,7 @@ a:hover {
   margin: 20px 0px 20px 40em;
 }
 
-.detailContainer{
+.detailContainer {
   margin: 0 0 0 0;
   padding: 0px 0px 0px 77px;
   font-size: 2vh;
@@ -339,7 +420,7 @@ a:hover {
 }
 
 #hrDetails {
-  margin: -20px 0 0 0 !important; 
+  margin: -20px 0 0 0 !important;
 }
 
 @media screen and (max-width: 1000px) {
@@ -369,7 +450,9 @@ a:hover {
   }
 
   .imageDetails {
-    margin: 0 0 0 50px;
+    margin: 0 0 0 42px;
+    height: 43vh;
+    width: 30%;
   }
 
   .detailContent {
@@ -377,7 +460,7 @@ a:hover {
   }
 
   .rating {
-    margin: -32em 5em 0em 49em;
+    margin: -23em 0em 0em 49em;
   }
 
   .review {
@@ -390,7 +473,23 @@ a:hover {
     padding: 10px 10px;
     margin: -29px 0px 13px 0px;
   }
- 
+
+  .main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  #FilmoActeurs {
+    margin: 0px 0px 0px 4em;
+  }
+
 }
 
 @media screen and (max-width: 765px) {
@@ -404,7 +503,7 @@ a:hover {
   }
 
   .actoreBadge {
-   margin: 0 7px 0 18px;
+    margin: 0 7px 0 18px;
   }
 
   .degrade-horizontal {
@@ -466,9 +565,7 @@ a:hover {
     width: 53%;
   }
 
-  .reviewContent {
-    
-  }
+  .reviewContent {}
 
   .h3Review {
     margin: 1px 1em 0px -11em;
@@ -476,10 +573,35 @@ a:hover {
 
   #FilmoActeurs {
     margin: 0 0 0 1em;
+  }
+
+  .trailer {
+    width: 10%;
+  }
+  
+
 }
 
-.main {
-  grid-area: main;
+@media(max-width:1060px){
+  .testimonial-box{
+      width:45%;
+      padding: 10px;
+  }
 }
- 
+@media(max-width:790px){
+  .testimonial-box{
+      width:100%;
+  }
+  .testimonial-heading h1{
+      font-size: 1.4rem;
+  }
+}
+@media(max-width:340px){
+  .box-top{
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+  }
+  .reviews{
+      margin-top: 10px;
+  }
 }

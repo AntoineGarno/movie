@@ -23,15 +23,15 @@ const Trailer = (props) => {
         .map((movie, index) => (
           <iframe
             width="800"
-            height="600"
+            height="400"
             src={"https://www.youtube.com/embed/" + movie.key}
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-            className="mx-3 d-flex flex-column"
+            className="mx-3 d-flex flex-column rounded"
           ></iframe>
-        ))}
+          ))}
     </div>
   );
 };

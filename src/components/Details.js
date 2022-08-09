@@ -50,11 +50,11 @@ const Details = (props) => {
             }}
             className="imageDetails img-fluid"
           />
-          <div className="flex-column col-6 d-flex align-items-start  detailContent">
+          <div className="flex-column col-6 d-flex align-items-start mt-5 ml-2 detailContent">
             <h1 className="d-flex align-items-start mb-3">{pop.title}</h1>
-            <p  className="d-flex align-items-start my-5">{pop.release_date}</p>
-            <p>{timeConvert(pop.runtime)} </p>
-            <button className=" bg-warning p-2 px-3 border-0 rounded-pill text-light btn-details">
+            <p  className="d-flex align-items-start  fs-4">{pop.release_date}</p>
+            <p className="fs-4">{timeConvert(pop.runtime)} </p>
+            <button className=" bg-warning p-2 px-3 border-0 rounded-pill text-light btn-details fs-4">
               <i class="fa fa-play-circle-o px-2" aria-hidden="true"></i>
               Bande annonce
             </button>
@@ -67,7 +67,7 @@ const Details = (props) => {
         </div>
       </div>
 
-      <div className="container-fluid">
+      <div className="mx-5 px-5">
         <div className="row mx-md-1 mx-5">
           <ul className="d-flex flex-row p-md-1 col-md-3 col-lg-3 liActor mr-md-4 mx-4 mt-2">
             <li className="pt-1 m col-md-5 col-lg-3">Résumé</li>
@@ -75,7 +75,7 @@ const Details = (props) => {
             <li className="pt-1 m col-md-5 col-lg-3">Photos</li>
           </ul>
 
-          <div className="px-4 col-md-6 col-lg-6">
+          <div className="px-2 col-md-6 col-lg-6">
             <ul className="d-flex justify-content-start flex-row p-2 col-lg-6">
               <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">Acteur</li>
               <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">Directeur</li>

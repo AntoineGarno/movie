@@ -262,8 +262,8 @@ a:hover {
 }
 
 .barActor {
-  margin: 0px 65px;
-  padding: 10px 50px;
+  margin: 0px 56px;
+  padding: 11px 10px;
 }
 
 .categorie button {
@@ -298,15 +298,15 @@ a:hover {
   align-items: center;
 }
 
-#testimonials{
+#testimonials {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width:100%;
+  width: 100%;
 }
 
-.testimonial-heading{
+.testimonial-heading {
   letter-spacing: 1px;
   margin: 30px 0px;
   padding: 10px 20px;
@@ -316,67 +316,77 @@ a:hover {
   align-items: center;
 }
 
-.testimonial-heading span{
+.testimonial-heading span {
   font-size: 1.3rem;
   color: #f1f0f0;
   margin-bottom: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-.testimonial-box-container{
+
+.testimonial-box-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width:100%;
+  width: 100%;
 }
-.testimonial-box{
+
+.testimonial-box {
   width: 800px;
   padding: 20px;
   margin: 15px;
 }
-.name-user{
+
+.name-user {
   display: flex;
   flex-direction: column;
 }
-.name-user strong{
+
+.name-user strong {
   color: #e6dede;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
-.name-user span{
+
+.name-user span {
   color: #979797;
   font-size: 0.8rem;
 }
 
-.box-top{
+.box-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-.client-comment p{
+
+.client-comment p {
   font-size: 0.9rem;
   color: #eeeded;
 }
-.testimonial-box:hover{
+
+.testimonial-box:hover {
   transform: translateY(-10px);
   transition: all ease 0.3s;
 }
 
 .btn-review {
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: 400;
   padding: 0.5em 1em;
   margin: 0.5em;
-  background-color: #7f5af0;
-  color: #ffffff;
+  background-color: #7f5af000;
+  color: #FFBB00;
+  border: 1px solid #FFBB00;
+  margin: 0px 20px;
 }
 
-::selection{
+::selection {
   color: #ffffff;
   background-color: #252525;
 }
+
 .reviewContent {
   margin: 1em auto;
   color: #c9c9c9;
@@ -416,7 +426,12 @@ a:hover {
 }
 
 #FilmoActeurs {
-  margin: 0 0 0 110px;
+  margin: 0 0 0 95px;
+}
+
+.similarMovies {
+  width: 250px;
+  margin: 0;
 }
 
 #hrDetails {
@@ -578,30 +593,34 @@ a:hover {
   .trailer {
     width: 10%;
   }
-  
+
 
 }
 
-@media(max-width:1060px){
-  .testimonial-box{
-      width:45%;
-      padding: 10px;
+@media(max-width:1060px) {
+  .testimonial-box {
+    width: 45%;
+    padding: 10px;
   }
 }
-@media(max-width:790px){
-  .testimonial-box{
-      width:100%;
+
+@media(max-width:790px) {
+  .testimonial-box {
+    width: 100%;
   }
-  .testimonial-heading h1{
-      font-size: 1.4rem;
+
+  .testimonial-heading h1 {
+    font-size: 1.4rem;
   }
 }
-@media(max-width:340px){
-  .box-top{
-      flex-wrap: wrap;
-      margin-bottom: 10px;
+
+@media(max-width:340px) {
+  .box-top {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
   }
-  .reviews{
-      margin-top: 10px;
+
+  .reviews {
+    margin-top: 10px;
   }
 }

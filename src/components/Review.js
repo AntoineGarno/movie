@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const Review = (props) => {
   const [pop, setPop] = useState([]);
+  const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
     axios
@@ -26,7 +27,15 @@ const Review = (props) => {
               <h3>{movie.author}</h3>
               <p>Écris le {movie.updated_at}</p>
             </div>
-            <p>{movie.content}</p>
+            <p>
+              {showMore ? movie.content : movie.content.substring(0, 350)}
+              <button
+                className="btn reviewBtn"
+                onClick={() => setShowMore(!showMore)}
+              >
+                {showMore ? "Show less" : "Show more"}
+              </button>
+            </p>
           </div>
         ))}
     </div>

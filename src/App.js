@@ -6,11 +6,13 @@ import Popular from "./pages/Popular";
 import Search from "./pages/Search";
 import MovieDetails from "./pages/MovieDetails";
 import ActorDetails from "./pages/ActorDetails";
+import Home from "./pages/Home";
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Popular} />
+        <Route path="/" exact component={Home} />
+        <Route path="/popular" exact component={Popular} />
         <Route path="/search" exact component={Search} />
         <Route path="/categories" exact component={Categories} />
         <Route path="/details/:slug" exact component={MovieDetails} />

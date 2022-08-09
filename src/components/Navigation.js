@@ -13,7 +13,9 @@ const Navigation = () => {
         </div>
 
         <div className="navigation rounded-pill col-sm-6 col-md-8 col-lg-5 m-3 d-flex flex-row justify-content-between p-3">
-          <div className="p-2">HOME</div>
+          <NavLink exact to="" activeClassName="nav-active">
+            Home
+          </NavLink>
           <NavLink exact to="/search" activeClassName="nav-active">
             Search
           </NavLink>
@@ -22,14 +24,19 @@ const Navigation = () => {
             Categories
           </NavLink>
 
-          <NavLink exact to="" activeClassName="nav-active">
+          <NavLink exact to="/popular" activeClassName="nav-active">
             Popular
           </NavLink>
           {/* <NavLink exact to="/loups" activeClassName="nav-active">
             Loupe
           </NavLink> */}
-          <div className="p-3">Bell Badge</div>
-          <div className="p-3">Photo </div>
+
+          <i class="fa fa-bell px-2" aria-hidden="true"></i>
+          <img
+            src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+            alt=""
+            className="navImg"
+          />
         </div>
       </div>
     </div>

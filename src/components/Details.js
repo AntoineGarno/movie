@@ -17,7 +17,6 @@ const Details = (props) => {
           "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
-    console.log(pop.id);
   }, [refreshPage]);
 
   function refreshPage() {
@@ -31,6 +30,18 @@ const Details = (props) => {
     var rminutes = Math.round(minutes);
     return rhours + " hour(s) and " + rminutes + " minute(s).";
   }
+
+  const getBackgroundColor = (value) => {
+    let bgColor;
+    if (value >= 8) {
+      bgColor = "ratingGreen";
+    } else if (value >= 6 && value < 8) {
+      bgColor = "ratingYellow";
+    } else if (value < 6) {
+      bgColor = "ratingRed";
+    }
+    return bgColor;
+  };
 
   return (
     <div>
@@ -50,18 +61,25 @@ const Details = (props) => {
             }}
             className="imageDetails col-4"
           />
+
           <div className=" flex-column col-7  d-flex align-items-start px-5">
             <h1 className="d-flex align-items-start mb-5">{pop.title}</h1>
             <p lassName="d-flex align-items-start my-5">{pop.release_date}</p>
+            {/* <div className="d-flex flex-row">
+              {pop.genres.map((genre) => (
+                <p>{genre.name}</p>
+              ))}
+            </div> */}
+
             <p>{timeConvert(pop.runtime)} </p>
             <button className=" bg-warning my-5 p-2 px-3 border-0 rounded-pill text-light">
               <i class="fa fa-play-circle-o px-2" aria-hidden="true"></i>
-              Bande annonce
+              Trailer
             </button>
           </div>
           <div className="col-1">
-            <div className="rating">
-              <p className="p-0 m-0">{pop.vote_average * 10}%</p>
+            <div className={getBackgroundColor(pop.vote_average)}>
+              <p className="p-0 m-0">{(pop.vote_average * 10).toFixed(2)}%</p>
             </div>
           </div>
         </div>
@@ -69,16 +87,16 @@ const Details = (props) => {
 
       <div className="row ">
         <ul className="d-flex flex-row p-md-1  col-md-2 col-lg-5  liActor">
-          <li className="pt-1 m col-md-1 col-lg-3">Résumé</li>
-          <li className="pt-1 m col-md-1 col-lg-3">Vidéos</li>
+          <li className="pt-1 m col-md-1 col-lg-3">Summary</li>
+          <li className="pt-1 m col-md-1 col-lg-3">Videos</li>
           <li className="pt-1 m col-md-1 col-lg-3">Photos</li>
         </ul>
 
         <div className="px-4 col-md-4 col-lg-6">
-          <ul className="d-flex justify-content-start flex-row p-2 ml-4 col-lg-6 ">
-            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Acteur</li>
-            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Directeur</li>
-            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Producteur</li>
+          <ul className="d-flex justify-content-start flex-row ">
+            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Actors</li>
+            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Director</li>
+            <li className="px-4 py-2 mx-3 col-lg-4 actoreBadge">Productor</li>
           </ul>
         </div>
       </div>

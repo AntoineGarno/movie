@@ -1,6 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Rubik+Mono+One&family=Work+Sans:wght@400;600;700&display=swap');
 
 
+
+
+.navImg{
+  width: 2.5vw;
+  border-radius: 50%;
+  border: 2px solid #7F5AF0;
+}
+.carousel{
+  height: 50vh;
+}
+.bgDetails2 {
+ position: relative;
+  width: 100%;
+  height: 50vh;
+  z-index: -100;
+  opacity: 50%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.bgdetailsImg{
+  position: absolute;
+  z-index: 1;
+
+  width: 10vh;
+  height: 10vh;
+  
+} 
+
+.reviewBtn{
+  color: rgb(0, 255, 21);
+}
+.reviewBtn:hover{
+  color: rgb(200, 255, 0);
+}
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -88,9 +126,29 @@ a:hover {
   margin: 0px 0 0 130px;
 }
 
-.rating {
+.ratingGreen{
   background-color: #000000;
-  border: 3px solid #7f5af0;
+  border: 3px solid #00ff15;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ratingYellow{
+  background-color: #000000;
+  border: 3px solid #dbeb03;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ratingRed{
+  background-color: #000000;
+  border: 3px solid #ff2525;
   border-radius: 50%;
   height: 100px;
   width: 100px;

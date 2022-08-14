@@ -13,11 +13,10 @@ const Details = (props) => {
     axios
       .get(
         "https://api.themoviedb.org/3/movie/" +
-        props.id +
-        "?api_key=a67b57849deb687f2cd49d7a8298b366"
+          props.id +
+          "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
-    console.log(pop.id);
   }, [refreshPage]);
 
   function refreshPage() {
@@ -31,6 +30,18 @@ const Details = (props) => {
     var rminutes = Math.round(minutes);
     return rhours + " hour(s) and " + rminutes + " minute(s).";
   }
+
+  const getBackgroundColor = (value) => {
+    let bgColor;
+    if (value >= 8) {
+      bgColor = "ratingGreen";
+    } else if (value >= 6 && value < 8) {
+      bgColor = "ratingYellow";
+    } else if (value < 6) {
+      bgColor = "ratingRed";
+    }
+    return bgColor;
+  };
 
   return (
     <div className="">
@@ -52,16 +63,16 @@ const Details = (props) => {
           />
           <div className="flex-column col-6 d-flex align-items-start mt-5 ml-2 detailContent">
             <h1 className="d-flex align-items-start mb-3">{pop.title}</h1>
-            <p  className="d-flex align-items-start  fs-4">{pop.release_date}</p>
+            <p className="d-flex align-items-start  fs-4">{pop.release_date}</p>
             <p className="fs-4">{timeConvert(pop.runtime)} </p>
             <button className=" bg-warning p-2 px-3 border-0 rounded-pill text-light btn-details fs-4">
               <i class="fa fa-play-circle-o px-2" aria-hidden="true"></i>
-              Bande annonce
+              Trailer
             </button>
           </div>
-          <div className="col-2">
-            <div className="rating">
-              <p className="p-0 m-0">{pop.vote_average * 10}%</p>
+          <div className="col-1">
+            <div className={getBackgroundColor(pop.vote_average)}>
+              <p className="p-0 m-0">{(pop.vote_average * 10).toFixed(2)}%</p>
             </div>
           </div>
         </div>
@@ -77,9 +88,15 @@ const Details = (props) => {
 
           <div className="px-2 col-md-6 col-lg-6">
             <ul className="d-flex justify-content-start flex-row p-2 col-lg-6">
-              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">Acteur</li>
-              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">Directeur</li>
-              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">Producteur</li>
+              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">
+                Acteur
+              </li>
+              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">
+                Directeur
+              </li>
+              <li className="px-4 py-2 mx-3 col-md-4 col-lg-4 actoreBadge">
+                Producteur
+              </li>
             </ul>
           </div>
         </div>
@@ -95,7 +112,10 @@ const Details = (props) => {
         </div>
       </div>
       <div className="row">
-        <div className="d-inline-flex flex-row filmographie py-3 " id="FilmoActeurs">
+        <div
+          className="d-inline-flex flex-row filmographie py-3 "
+          id="FilmoActeurs"
+        >
           <h4 className="py-2 mx-2 ">Acteurs</h4>
           <span class="mt-4 degrade-horizontal"></span>
         </div>

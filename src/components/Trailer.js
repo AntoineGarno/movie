@@ -17,7 +17,7 @@ const Trailer = (props) => {
     window.location.reload(false);
   }
   return (
-    <div className="d-flex flex-lg-row flex-sm-column justify-content-center">
+    <div className="m-sm-auto d-flex flex-lg-row flex-sm-column justify-content-center">
       {pop
         .filter((movie, index) => index < 1)
         .map((movie, index) => (
@@ -29,9 +29,9 @@ const Trailer = (props) => {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-            className="mx-3 d-flex flex-column rounded"
+            className="d-flex flex-column rounded trailer2"
           ></iframe>
-          ))}
+        ))}
     </div>
   );
 };

@@ -11,8 +11,8 @@ const ActorMovies = (props) => {
     axios
       .get(
         "https://api.themoviedb.org/3/person/" +
-        props.id +
-        "/movie_credits?api_key=a67b57849deb687f2cd49d7a8298b366"
+          props.id +
+          "/movie_credits?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data.cast));
   }, []);
@@ -23,12 +23,7 @@ const ActorMovies = (props) => {
       {pop
         .filter((movie, index) => index < 5)
         .map((movie) => (
-          <div className="row">
-            <div className="actorMovieComp mx-2">
-              <Movie movie={movie} key={movie.id} />
-              <div className="bg-dark mx-3 p-1">{movie.title}</div>
-            </div>
-          </div>
+          <Movie movie={movie} key={movie.id} />
         ))}
     </div>
   );

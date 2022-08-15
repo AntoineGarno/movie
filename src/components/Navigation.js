@@ -13,7 +13,7 @@ const Navigation = () => {
         </div>
 
         <div className="navigation rounded-pill col-sm-6 col-md-8 col-lg-5 m-3 d-flex flex-row justify-content-between p-3">
-          <NavLink exact to="" activeClassName="nav-active">
+          <NavLink exact to="/" activeClassName="nav-active">
             Home
           </NavLink>
           <NavLink exact to="/search" activeClassName="nav-active">

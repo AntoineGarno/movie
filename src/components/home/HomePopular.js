@@ -17,7 +17,7 @@ const HomePopular = () => {
   return (
     <div className="row main">
       {
-        <div className="row target">
+        <div className="target">
           {pop.map((movie, index) => (
             <Movie movie={movie} key={movie.id} />
           ))}

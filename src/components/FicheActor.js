@@ -23,7 +23,7 @@ const FicheActor = (props) => {
   return (
     <div className="main container-fluid my-4">
       <div className="row">
-        <div className="col-sm-1 col-md-2 col-lg-3 m-2 imageActorZone" >
+        <div className="col-sm-1 col-md-2 col-lg-3 m-2 imageActorZone">
           <img
             src={"https://image.tmdb.org/t/p/w200" + pop.profile_path}
             alt="poster"
@@ -47,30 +47,30 @@ const FicheActor = (props) => {
           />
         </div>
 
-        <div className="col-sm-8 col-md-6 col-lg-7 text-start my-sm-4" id="innerTextCard">
+        <div
+          className="col-sm-8 col-md-6 col-lg-7 text-start my-sm-4"
+          id="innerTextCard"
+        >
           <h2 className="pb-1">{pop.name}</h2>
           <h3 className="py-3">Biographie</h3>
           <p className="pb-4 col-sm-3 col-md-6 col-lg-10">{pop.biography}</p>
-          <strong><p>Date de naissance</p></strong>
+          <strong>
+            <p>Date de naissance</p>
+          </strong>
           <p>{pop.birthday}</p>
-          <strong><p>Lieu de naissance</p></strong>
+          <strong>
+            <p>Lieu de naissance</p>
+          </strong>
           <p className="text-danger">METTRE LIEU DE NAISSANCE CI DANS API</p>
         </div>
 
         <div className="row">
-          <div className="row m-4">
-            <div className="px-4 col-sm-2 col-md-4 col-lg-6">
-              <ul className="d-flex justify-content-start flex-row p-2 ml-4 col-sm-12 col-lg-6 badgeMauve">
-                <li className="px-4 py-2 col-lg-4 actoreBadge">Acteur</li>
-                <li className="px-4 py-2 col-lg-4 actoreBadge">Directeur</li>
-                <li className="px-4 py-2 col-lg-4 actoreBadge">Producteur</li>
-              </ul>
-            </div>
-          </div>
-
-          <hr className="hr" />
+          <hr className="hr mt-3" />
           <div className="row">
-            <div className="d-inline-flex flex-row justify-content-evenly filmographie col-6 py-3" id="connuPour">
+            <div
+              className="d-inline-flex flex-row justify-content-evenly filmographie col-6 py-3"
+              id="connuPour"
+            >
               <h4 className="py-2 ">Connu pour</h4>
               <span class="mt-4 degrade-horizontal"></span>
             </div>
@@ -142,7 +142,10 @@ const FicheActor = (props) => {
           </div>
         </div>
         <div className="row">
-          <div className="col-6 d-inline-flex flex-row justify-content-evenly filmographie" id="filmographie">
+          <div
+            className="col-6 d-inline-flex flex-row justify-content-evenly filmographie"
+            id="filmographie"
+          >
             <h4 className="py-2 ">Photos</h4>
             <span class="mt-4 mx-5 degrade-horizontal"></span>
           </div>

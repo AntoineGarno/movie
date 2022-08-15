@@ -3,11 +3,7 @@ import { NavLink } from "react-router-dom";
 import imgNotFound from "../images/imgNotFound.jpg";
 const Movie = ({ movie }) => {
   return (
-    <NavLink
-      exact
-      to={"/details/" + movie.id}
-      className="image-container d-flex justify-content-center col"
-    >
+    <NavLink exact to={"/details/" + movie.id} className="image-container col">
       <img
         src={"https://image.tmdb.org/t/p/w200" + movie.poster_path}
         alt="poster"

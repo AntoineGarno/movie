@@ -17,7 +17,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="m-4">
+        <div className="">
           <a href="#">
             <img src={facebook} alt="Facebook" className="text-secondary" />
           </a>

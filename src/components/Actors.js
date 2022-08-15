@@ -21,13 +21,16 @@ const Actors = (props) => {
   }
 
   return (
-    <div className=" row actors">
-      <h1>Actors</h1>
+    <div className="row actors justify-content-center">
       {pop
         .filter((actor) => actor.order < 4)
         .map((actor) => {
           return (
-            <NavLink className="col" exact to={"/actordetails/" + actor.id}>
+            <NavLink
+              className="col flex flex-column actorDetails"
+              exact
+              to={"/actordetails/" + actor.id}
+            >
               <img
                 className="actorImg "
                 src={"https://image.tmdb.org/t/p/w200" + actor.profile_path}

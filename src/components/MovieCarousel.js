@@ -15,7 +15,7 @@ const MovieCarousel = () => {
   }, []);
 
   return (
-    <div className="row carousel main  d-flex main-info">
+    <div className="row carousel main d-flex main-info">
       <Carousel className="col-12 carousel">
         <Carousel.Item>
           <img

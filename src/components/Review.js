@@ -19,11 +19,15 @@ const Review = (props) => {
   }, []);
 
   return (
-    <div className="container row">
+    <div className="row">
+      <div className="d-inline-flex flex-row filmographie" id="FilmoActeurs">
+        <h4 className="py-2">Review</h4>
+        <span class="mt-4 degrade-horizontal"></span>
+      </div>
       {pop
         .filter((movie, index) => index < 2)
         .map((movie) => (
-          <div class=" testimonial-box ">
+          <div class="col testimonial-box ">
             <div class="box-top">
               <div class="profile">
                 <div class="name-user">
@@ -33,11 +37,12 @@ const Review = (props) => {
                   </span>
                 </div>
               </div>
-              <div class="reviews">
-                <FontAwesomeIcon icon="fa-solid fa-star" />
-                <FontAwesomeIcon icon="fa-solid fa-star" />
-                <FontAwesomeIcon icon="fa-solid fa-star" />
-                <FontAwesomeIcon icon="fa-solid fa-star-half" />
+              <div class="col reviews">
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star text-warning"></i>
+                <i class="fas fa-star-half text-warning"></i>
               </div>
             </div>
             <div class="client-comment">

@@ -15,14 +15,12 @@ const HomeRated = () => {
   }, []);
 
   return (
-    <div className="row main">
-      {
-        <div className="row target">
-          {pop.map((movie, index) => (
-            <Movie movie={movie} key={movie.id} />
-          ))}
-        </div>
-      }
+    <div className="row main  ">
+      <div className=" target">
+        {pop.map((movie, index) => (
+          <Movie movie={movie} key={movie.id} />
+        ))}
+      </div>
     </div>
   );
 };

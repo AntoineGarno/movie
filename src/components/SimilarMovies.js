@@ -21,13 +21,11 @@ const SimilarMovies = (props) => {
   }
 
   return (
-    <div className="row target">
+    <div className="row actors justify-content-center">
       {pop
         .filter((movie, index) => index < 4)
         .map((movie) => (
-          <div className="similarMovies row col mx-4">
-            <Movie movie={movie} key={movie.id} onClick={refreshPage} />
-          </div>
+          <Movie movie={movie} key={movie.id} onClick={refreshPage} />
         ))}
     </div>
   );

@@ -67,19 +67,20 @@ const SearchMovies = () => {
 
   return (
     <div>
-      <form className="inputField">
+      <form className="inputField ">
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Rechercher"
+          placeholder="Search"
+          className="loupe"
         />
-
+        <button type="submit"> <i class="fas fa-search"></i></button>
         {/* <button onClick={search}>Submit</button> */}
       </form>
       <div className="d-flex flex-row justify-content-center my-3 ">
         <ThemeProvider theme={theme}>
-          <Stack spacing={2}>
+          <Stack spacing={6}>
             <Typography>Page: {page}</Typography>
             <Pagination
               count={50}
@@ -93,7 +94,7 @@ const SearchMovies = () => {
       </div>
 
       {
-        <div className="row target main">
+        <div className="justify-content-center row target main">
           {pop.map((movie, index) => (
             <Movie movie={movie} key={movie.id} />
           ))}

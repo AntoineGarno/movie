@@ -61,7 +61,6 @@ const FicheActor = (props) => {
           <strong>
             <p>Lieu de naissance</p>
           </strong>
-          <p className="text-danger">METTRE LIEU DE NAISSANCE CI DANS API</p>
         </div>
 
         <div className="row">

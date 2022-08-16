@@ -11,13 +11,13 @@ const HomePopular = () => {
       .get(
         "https://api.themoviedb.org/3/movie/popular?api_key=a67b57849deb687f2cd49d7a8298b366&language=en-US"
       )
-      .then((res) => setPop(res.data.results.slice(0, 12)));
+      .then((res) => setPop(res.data.results.slice(0, 14)));
   }, []);
 
   return (
     <div className="row main">
       {
-        <div className="row target">
+        <div className="justify-content-center row target">
           {pop.map((movie, index) => (
             <Movie movie={movie} key={movie.id} />
           ))}

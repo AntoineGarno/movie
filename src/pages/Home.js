@@ -10,13 +10,15 @@ const Home = () => {
     <div>
       <Navigation />
       <MovieCarousel />
-      <div className="homePopular">
-        <h1>Popular Movies</h1>
-        <HomePopular />
-      </div>
-      <div className="homePopular">
-        <h1>Top Rated Movies</h1>
-        <HomeRated />
+      <div className="">
+        <div className="homePopular">
+          <h1 className="mb-4 pb-5">Popular Movies</h1>
+          <HomePopular />
+        </div>
+        <div className="homePopular">
+          <h1 className="m-5 pb-5">Top Rated Movies</h1>
+          <HomeRated />
+        </div>
       </div>
 
       <Footer />

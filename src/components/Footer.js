@@ -1,7 +1,7 @@
 import React from "react";
-import twitter from "../images/twitter.png";
-import facebook from "../images/facebook.png";
-import instagram from "../images/instagram.png";
+import twitter from "../images/twitter1.png";
+import facebook from "../images/fb1.png";
+import instagram from "../images/instagram1.png";
 
 const Footer = () => {
   return (
@@ -17,15 +17,15 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="">
+        <div className="p-2">
           <a href="#">
-            <img src={facebook} alt="Facebook" className="text-secondary" />
+            <img src={facebook} alt="Facebook" width={20} />
           </a>
           <a href="#">
-            <img src={instagram} alt="Instagram" className="" />
+            <img src={instagram} alt="Instagram" width={35} />
           </a>
           <a href="#">
-            <img src={twitter} alt="Twitter" className="" />
+            <img src={twitter} alt="Twitter" width={35} />
           </a>
         </div>
         <div className="row m-2 p-1">

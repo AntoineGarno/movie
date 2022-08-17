@@ -4,7 +4,7 @@ import imgNotFound from "../images/imgNotFound.jpg";
 import Trailer from "./Trailer";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Genres from "./Genres";
 
 const Details = (props) => {
   const { slug } = useParams();
@@ -18,13 +18,8 @@ const Details = (props) => {
           "?api_key=a67b57849deb687f2cd49d7a8298b366"
       )
       .then((res) => setPop(res.data));
+  }, [slug, pop]);
 
-    console.log(pop);
-  }, [slug]);
-
-  function refreshPage() {
-    window.location.reload(false);
-  }
   function timeConvert(n) {
     var num = n;
     var hours = num / 60;
@@ -68,6 +63,7 @@ const Details = (props) => {
             <h1 className="d-flex align-items-start mb-3">{pop.title}</h1>
             <p className="d-flex align-items-start  fs-4">{pop.release_date}</p>
             <p className="fs-4">{timeConvert(pop.runtime)} </p>
+            <Genres id={slug} />
             <button className="bg-warning text-dark p-2 px-3 border-0 rounded-pill btn-details fs-4">
               <i class="fas fa-play-circle mx-2"></i>
               Trailer

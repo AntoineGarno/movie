@@ -625,15 +625,39 @@ a:hover {
 
 }
 
-
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1620px) {
   .navigation {
-    display: none;
+    width: 47em
   }
 
+  #logoMobile {
+    width: 5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navigation {
+    display: none !important;
+    width: 47em
+  }
+
+  .logo {
+    display: none !important;
+  }
+
+  #logoMobile {
+    width: 7em;
+  }
+}
+
+@media screen and (max-width: 850px) {
   .badgeMauve {
     margin: 0px 0px 30px 175px;
     font-size: 12px;
+  }
+
+  .navifationMobile {
+    background-color: #1F1F21;
   }
 
   .actoreBadge {

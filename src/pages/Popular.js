@@ -8,7 +8,6 @@ const Popular = () => {
   return (
     <div>
       <Navigation />
-
       <PopularMovies />
       <Footer />
     </div>

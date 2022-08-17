@@ -45,33 +45,33 @@ const CategoriesList = () => {
 
   return (
     <div>
-      <div className="categorie my-5">
+      <div className="categorie container my-5">
         {genre.map((genre, index) => (
           <button value={genre.id} onClick={(e) => setId(e.target.value)}>
             {genre.name}
           </button>
         ))}
       </div>
-      <div className="d-flex flex-row justify-content-center m-5 ">
-        <ThemeProvider theme={theme}>
-          <Stack spacing={2}>
-            <Typography>Page: {page}</Typography>
-            <Pagination
-              count={50}
-              page={page}
-              onChange={handleChange}
-              color="secondary"
-              variant="text"
-            />
-          </Stack>
-        </ThemeProvider>
-      </div>
 
       {
-        <div className="row target main">
+        <div className="row justify-content-center target main">
           {pop.map((movie) => (
             <Movie movie={movie} key={movie.id} />
           ))}
+          <div className="d-flex flex-row justify-content-center m-5 ">
+            <ThemeProvider theme={theme}>
+              <Stack spacing={2}>
+                <Typography>Page: {page}</Typography>
+                <Pagination
+                  count={50}
+                  page={page}
+                  onChange={handleChange}
+                  color="secondary"
+                  variant="text"
+                />
+              </Stack>
+            </ThemeProvider>
+          </div>
         </div>
       }
     </div>

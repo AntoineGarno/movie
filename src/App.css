@@ -7,16 +7,18 @@
 }
 
 
-.navImg{
+.navImg {
   width: 2.5vw;
   border-radius: 50%;
   border: 2px solid #7F5AF0;
 }
-.carousel{
+
+.carousel {
   height: 50vh;
 }
+
 .bgDetails2 {
- position: relative;
+  position: relative;
   width: 100%;
   height: 50vh;
   z-index: -100;
@@ -25,19 +27,21 @@
   left: 0;
   object-fit: cover;
 }
-.bgdetailsImg{
+
+.bgdetailsImg {
   position: absolute;
   z-index: 1;
 
   width: 10vh;
   height: 10vh;
-  
-} 
 
-.reviewBtn{
+}
+
+.reviewBtn {
   color: rgb(0, 255, 21);
 }
-.reviewBtn:hover{
+
+.reviewBtn:hover {
   color: rgb(200, 255, 0);
 }
 
@@ -129,7 +133,7 @@ a:hover {
   object-fit: contain;
 }
 
-.ratingGreen{
+.ratingGreen {
   background-color: #000000;
   border: 3px solid #00ff15;
   border-radius: 50%;
@@ -139,7 +143,8 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-.ratingYellow{
+
+.ratingYellow {
   background-color: #000000;
   border: 3px solid #dbeb03;
   border-radius: 50%;
@@ -149,7 +154,8 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-.ratingRed{
+
+.ratingRed {
   background-color: #000000;
   border: 3px solid #ff2525;
   border-radius: 50%;
@@ -255,7 +261,7 @@ a:hover {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   width: 200px;
-  height:300px;
+  height: 300px;
   transition: 0.5s ease;
   opacity: 0;
   font-weight: bold;
@@ -268,7 +274,7 @@ a:hover {
   max-width: 200px;
   width: 100%;
   transition: transform 0.2s;
-  padding: 0;  
+  padding: 0;
 }
 
 .image-container:hover {
@@ -353,11 +359,13 @@ a:hover {
 } */
 
 .categorie {
-  width: 70%;
+  width: 58vw;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  flex-direction: row;
+  align-content: flex-start;
 }
 
 .review {
@@ -475,6 +483,40 @@ a:hover {
   margin: 9px -280px 0px 179px;
 }
 
+.inputField {
+  width: 100%;
+  max-width: 768px;
+  background: #373940;
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 10px;
+  margin: 35px auto;
+}
+
+.inputField input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  padding: 11px 20px;
+  font-size: 20px;
+  color: #cccc;
+  border-color: rgba(129, 96, 221);
+}
+::placeholder {
+  color: rgb(129, 129, 129);
+}
+
+.inputField button {
+  border: 0;
+  border-radius: 50%;
+  width: 41px;
+  height: 40px;
+  background-color: transparent;
+  color: #cccc;
+}
+
+
 .detailContent {
   margin: 46px 0 0 0px;
 }
@@ -491,9 +533,6 @@ a:hover {
   font-size: 2vh;
 }
 
-#FilmoActeurs {
-  margin: 0px 0 0 6px;
-}
 
 .similarMovies {
   position: relative;
@@ -572,7 +611,20 @@ a:hover {
     padding: 11px 29px;
   }
 
+  .inputField {
+    width: 100%;
+    max-width: 605px;
+    background: #373940;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    border-color: rgba(129, 96, 221);
+    padding: 10px;
+    margin: 19px auto;
+  }
+
 }
+
 
 @media screen and (max-width: 850px) {
   .navigation {
@@ -654,12 +706,24 @@ a:hover {
   }
 
   .bgDetails {
-   display: none;
+    display: none;
   }
 
   .detailContainer {
     font-size: 2vh;
     margin-top: -175px !important;
+  }
+
+  .inputField {
+    width: 100%;
+    max-width: 400px;
+    background: #373940;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    border-color: rgba(129, 96, 221);
+    padding: 10px;
+    margin: 19px auto;
   }
 
 }
@@ -690,4 +754,6 @@ a:hover {
   .reviews {
     margin-top: 10px;
   }
+
+  
 }

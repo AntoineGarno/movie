@@ -37,7 +37,7 @@ const Review = (props) => {
                   </span>
                 </div>
               </div>
-              <div class="col reviews">
+              <div class="col reviews d-flex flex-row">
                 <i class="fas fa-star text-warning"></i>
                 <i class="fas fa-star text-warning"></i>
                 <i class="fas fa-star text-warning"></i>

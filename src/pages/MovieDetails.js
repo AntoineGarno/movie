@@ -6,8 +6,6 @@ import { useParams } from "react-router-dom";
 import Details from "../components/Details";
 import Review from "../components/Review";
 import SimilarMovies from "../components/SimilarMovies";
-import Trailer from "../components/Trailer";
-import Movie from "../components/Movie";
 
 const MovieDetails = () => {
   const { slug } = useParams();

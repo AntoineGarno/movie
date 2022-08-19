@@ -23,7 +23,7 @@ const FicheActor = (props) => {
   return (
     <div className="main container-fluid my-4">
       <div className="row">
-        <div className="col-sm-1 col-md-2 col-lg-3 m-2 imageActorZone">
+        <div className="col-sm-12 col-md-2 col-lg-3 m-2 imageActorZone">
           <img
             src={"https://image.tmdb.org/t/p/w200" + pop.profile_path}
             alt="poster"
@@ -48,7 +48,7 @@ const FicheActor = (props) => {
         </div>
 
         <div
-          className="col-sm-8 col-md-6 col-lg-7 text-start my-sm-4"
+          className="col-sm-12 col-md-6 col-lg-7 text-start my-sm-4 p-2"
           id="innerTextCard"
         >
           <h2 className="pb-1">{pop.name}</h2>

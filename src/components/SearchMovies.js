@@ -75,7 +75,10 @@ const SearchMovies = () => {
           placeholder="Search"
           className="loupe"
         />
-        <button type="submit"> <i class="fas fa-search"></i></button>
+        <button type="submit">
+          {" "}
+          <i class="fas fa-search"></i>
+        </button>
         {/* <button onClick={search}>Submit</button> */}
       </form>
       <div className="d-flex flex-row justify-content-center my-3 ">

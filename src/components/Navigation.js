@@ -2,10 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../logo.png";
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 const Navigation = () => {
   return (
@@ -44,32 +43,58 @@ const Navigation = () => {
           />
         </div>
       </div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="d-lg-none d-md-block navigationMobile" >
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        bg="dark"
+        variant="dark"
+        className="d-lg-none d-md-block navigationMobile"
+      >
         <Container>
-              <Navbar.Brand href="#home">
-                <NavLink exact to="/" activeClassName="nav-active">
-                  <img src={logo} alt="Logo" className="logo" id="logoMobile" />
-                </NavLink>
-              </Navbar.Brand>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="me-auto">
-                  <NavLink exact to="/" activeClassName="nav-active" className="fs-2">
-                    Home
-                  </NavLink>
-                  <NavLink exact to="/search" activeClassName="nav-active" className="fs-2">
-                    Search
-                  </NavLink>
-                </Nav>
-                <Nav>
-                  <NavLink exact to="/categories" activeClassName="nav-active" className="fs-2">
-                    Categories
-                  </NavLink>
-                  <NavLink exact to="/popular" activeClassName="nav-active" className="fs-2">
-                    Popular
-                  </NavLink>
-                </Nav>
-              </Navbar.Collapse>
+          <Navbar.Brand href="#home">
+            <NavLink exact to="/" activeClassName="nav-active">
+              <img src={logo} alt="Logo" id="logoMobile" />
+            </NavLink>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <NavLink
+                exact
+                to="/"
+                activeClassName="nav-active"
+                className="fs-2"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                exact
+                to="/search"
+                activeClassName="nav-active"
+                className="fs-2"
+              >
+                Search
+              </NavLink>
+            </Nav>
+            <Nav>
+              <NavLink
+                exact
+                to="/categories"
+                activeClassName="nav-active"
+                className="fs-2"
+              >
+                Categories
+              </NavLink>
+              <NavLink
+                exact
+                to="/popular"
+                activeClassName="nav-active"
+                className="fs-2"
+              >
+                Popular
+              </NavLink>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>

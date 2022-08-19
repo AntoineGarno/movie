@@ -43,7 +43,7 @@ const Details = (props) => {
 
   return (
     <div>
-      <div className="main row d-flex my-5 main-info">
+      <div className="main row d-flex my-5 main-info mb-5">
         <img
           className="bgDetails "
           src={"https://image.tmdb.org/t/p/original" + pop.backdrop_path}
@@ -60,16 +60,22 @@ const Details = (props) => {
             className="imageDetails img-fluid"
           />
           <div className="flex-column col-6 d-flex align-items-start mt-5 ml-2 detailContent">
-            <h1 className="d-flex align-items-start mb-3">{pop.title}</h1>
+            <h1 className=" mb-3">{pop.title}</h1>
+
             <p className="d-flex align-items-start  fs-4">{pop.release_date}</p>
             <p className="fs-4">{timeConvert(pop.runtime)} </p>
+            <div className="col-1 ratingMobile ">
+              <div className={getBackgroundColor(pop.vote_average)}>
+                <p className="p-0 m-0">{(pop.vote_average * 10).toFixed(2)}%</p>
+              </div>
+            </div>
             <Genres id={slug} />
             <button className="bg-warning text-dark p-2 px-3 border-0 rounded-pill btn-details fs-4">
               <i class="fas fa-play-circle mx-2"></i>
               Trailer
             </button>
           </div>
-          <div className="col-1">
+          <div className="col-1 ratingWeb">
             <div className={getBackgroundColor(pop.vote_average)}>
               <p className="p-0 m-0">{(pop.vote_average * 10).toFixed(2)}%</p>
             </div>

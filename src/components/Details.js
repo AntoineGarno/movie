@@ -70,7 +70,7 @@ const Details = (props) => {
               </div>
             </div>
             <Genres id={slug} />
-            <button className="bg-warning text-dark p-2 px-3 border-0 rounded-pill btn-details fs-4">
+            <button className="bg-warning text-dark p-2 px-3 border-0 rounded-pill btn-details fs-4 my-sm-2">
               <i class="fas fa-play-circle mx-2"></i>
               Trailer
             </button>

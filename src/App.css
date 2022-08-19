@@ -654,6 +654,11 @@ a:hover {
   #logoMobile {
     width: 7em;
   }
+
+  .detailContainer {
+    font-size: 2vh;
+    margin-top: -120px !important;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -663,7 +668,7 @@ a:hover {
   .ratingMobile{
     display: block;
   }
-  
+
   
   .badgeMauve {
     margin: 0px 0px 30px 175px;
@@ -721,16 +726,16 @@ a:hover {
   }
 
   .filmographie {
-    margin: 0px 1em 11px -84px;
+    margin: 0px 1em 11px -15px;
   }
 
   #filmographie {
     padding: 0px 0px 0px 0px;
-    margin: 0px 0px 0px -74px;
+    margin: 0px 0px 0px 11px;
   }
 
   #connuPour {
-    margin: -1px 18px -48px -89px;
+    margin: -2px 18px -48px 4px;
   }
 
   .review {
@@ -749,7 +754,7 @@ a:hover {
 
   .detailContainer {
     font-size: 2vh;
-    margin-top: -175px !important;
+    margin-top: -120px !important;
   }
 
   .inputField {

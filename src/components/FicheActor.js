@@ -23,7 +23,7 @@ const FicheActor = (props) => {
   return (
     <div className="main container-fluid my-4">
       <div className="row">
-        <div className="col-sm-12 col-md-2 col-lg-3 m-2 imageActorZone">
+        <div className="col-sm-12 col-md-4 col-lg-3 m-2 imageActorZone">
           <img
             src={"https://image.tmdb.org/t/p/w200" + pop.profile_path}
             alt="poster"
@@ -53,7 +53,7 @@ const FicheActor = (props) => {
         >
           <h2 className="pb-1">{pop.name}</h2>
           <h3 className="py-3">Biographie</h3>
-          <p className="pb-4 col-sm-3 col-md-6 col-lg-10">{pop.biography}</p>
+          <p className="pb-4 col-sm-10 col-md-12 col-lg-10">{pop.biography}</p>
           <strong>
             <p>Date de naissance</p>
           </strong>
@@ -85,14 +85,14 @@ const FicheActor = (props) => {
           <hr className="hr2" />
 
           <div className="row">
-            <div className="col-5 d-inline-flex flex-row justify-content-evenly filmographie ">
-              <h4 className="py-2 px-5 mx-5">Filmographie</h4>
+            <div className="col-sm-12 col-md-12 col-lg-5 d-inline-flex flex-row justify-content-evenly filmographie ">
+              <h4 className="py-2 ">Filmographie</h4>
               <span class="mt-4 degrade-horizontal"></span>
             </div>
           </div>
 
-          <div className="col-9 d-flex flex-row tableFilmographie">
-            <table id="tableActor" className="p-2 px-3 col-8 text-start">
+          <div className="col-sm-12 col-md-12 col-lg-9 d-flex flex-row tableFilmographie">
+            <table id="tableActor" className="p-2 px-3 col-sm-12 col-md-12 col-lg-8 text-start">
               <tr className="bg-dark">
                 <th className="col-10">Acteur</th>
                 <th className="col-2">Date</th>
@@ -149,11 +149,11 @@ const FicheActor = (props) => {
             <span class="mt-4 mx-5 degrade-horizontal"></span>
           </div>
         </div>
-        <div className="row col-lg-12 col-sm-6 m-4 ">
-          <div className="col-1"></div>
-          <div className=" col-10 d-flex flex-row">
+        <div className="row col-lg-12 col-md-12 col-sm-6 m-4 ">
+          <div className="col-sm-1 col-lg-1"></div>
+          <div className="col-sm-12 col-md-6 col-lg-9 d-flex flex-row">
+          <div className="col-sm-1 col-md-3 col-lg-1"></div>
             <ActorPhotos id={props.id} />
-            <div className="col-1"></div>
           </div>
         </div>
       </div>

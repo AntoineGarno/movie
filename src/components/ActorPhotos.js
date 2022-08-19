@@ -20,13 +20,14 @@ const ActorPhotos = (props) => {
   return (
     <div className="container d-flex justify-content-around">
       {pop
-        .filter((actor, index) => index < 5)
+        .filter((actor, index) => index < 4)
         .map((actor) => (
           <div className="row">
             <div>
               <img
                 src={"https://image.tmdb.org/t/p/w200" + actor.file_path}
-                alt=""
+                alt="" 
+                className="p-3"
               />
             </div>
           </div>

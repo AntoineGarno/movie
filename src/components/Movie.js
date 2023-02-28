@@ -11,7 +11,7 @@ const Movie = ({ movie }) => {
         src={"https://image.tmdb.org/t/p/w200" + movie.poster_path}
         alt="poster"
         onError={({ currentTarget }) => {
-          currentTarget.onerror = null; // prevents looping
+          currentTarget.onerror = null; // prevents looping test
           currentTarget.src = imgNotFound;
         }}
         className="images"
